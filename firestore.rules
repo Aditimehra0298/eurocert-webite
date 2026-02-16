@@ -1,0 +1,24 @@
+// Copy these rules into Firebase Console > Firestore > Rules tab
+// This allows anyone to READ data but only authenticated users can WRITE
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Posts: anyone can read, only authenticated users can write
+    match /posts/{postId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Contacts: anyone can create (form submissions), only auth users can read/update/delete
+    match /contacts/{contactId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+
+    // Clients: anyone can read (public directory), only auth users can write
+    match /clients/{clientId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
