@@ -95,10 +95,11 @@ function AnimatedLines() {
 }
 
 export default function GlobalPresenceMap() {
-  const [loaded, setLoaded] = useState(false)
+  const [loaded] = useState(() => {
+    return true
+  })
 
   useEffect(() => {
-    setLoaded(true)
   }, [])
 
   return (

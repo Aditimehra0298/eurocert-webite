@@ -262,6 +262,163 @@ export default function CECertification() {
         </div>
       </section>
 
+      {/* Medical Devices Section - Light Theme */}
+      <section className="py-24 lg:py-32 bg-gradient-to-b from-white to-emerald-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <div data-reveal="reveal-up" className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 border border-emerald-200 rounded-full mb-6">
+              <span className="text-2xl">🏥</span>
+              <span className="text-emerald-600 text-xs font-bold uppercase tracking-[0.3em]">Healthcare Compliance</span>
+            </div>
+            <h2 data-reveal="reveal-up" data-reveal-delay="100" className="heading-font text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">Medical Devices <span className="text-emerald-600">(EU MDR / UK MDR)</span></h2>
+            <p data-reveal="reveal-up" data-reveal-delay="200" className="text-slate-500 text-lg max-w-3xl mx-auto">End-to-end regulatory support for safe and compliant entry into European and UK healthcare markets.</p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div data-reveal="reveal-left" className="p-8 rounded-3xl border border-emerald-200 bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                  <span className="w-8 h-8 flex items-center justify-center bg-emerald-100 rounded-lg">
+                    <i className="fas fa-info-circle text-emerald-600 text-sm"></i>
+                  </span>
+                  What is EU MDR (2017/745)?
+                </h3>
+                <p className="text-slate-600 leading-relaxed">The Medical Device Regulation (EU MDR 2017/745) governs the safety, performance, and market access of medical devices in the EU.</p>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div data-reveal="reveal-up" data-reveal-delay="100" className="p-4 bg-white rounded-2xl border border-emerald-100 text-center hover:border-emerald-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-chart-pie text-emerald-600 text-xl mb-2"></i>
+                  <p className="text-sm font-bold text-slate-900">Regulatory Strategy</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="150" className="p-4 bg-white rounded-2xl border border-emerald-100 text-center hover:border-emerald-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-file-medical-alt text-emerald-600 text-xl mb-2"></i>
+                  <p className="text-sm font-bold text-slate-900">Technical Docs</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="200" className="p-4 bg-white rounded-2xl border border-emerald-100 text-center hover:border-emerald-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-user-md text-emerald-600 text-xl mb-2"></i>
+                  <p className="text-sm font-bold text-slate-900">Clinical Eval</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="250" className="p-4 bg-white rounded-2xl border border-emerald-100 text-center hover:border-emerald-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-shield-virus text-emerald-600 text-xl mb-2"></i>
+                  <p className="text-sm font-bold text-slate-900">Risk Mgmt</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="300" className="p-4 bg-white rounded-2xl border border-emerald-100 text-center hover:border-emerald-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-user-tie text-emerald-600 text-xl mb-2"></i>
+                  <p className="text-sm font-bold text-slate-900">EU REP</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="350" className="p-4 bg-white rounded-2xl border border-emerald-100 text-center hover:border-emerald-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-flag-usa text-emerald-600 text-xl mb-2"></i>
+                  <p className="text-sm font-bold text-slate-900">UKRP</p>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <h3 data-reveal="reveal-right" className="text-xl font-bold text-slate-900 mb-6">Our Medical Device Services</h3>
+              <div className="space-y-3">
+                <div data-reveal="reveal-up" data-reveal-delay="100" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-emerald-100 hover:border-emerald-300 hover:shadow-md transition-all duration-300"><i className="fas fa-check text-emerald-500"></i><span className="text-slate-700">Regulatory Strategy & Classification</span></div>
+                <div data-reveal="reveal-up" data-reveal-delay="150" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-emerald-100 hover:border-emerald-300 hover:shadow-md transition-all duration-300"><i className="fas fa-check text-emerald-500"></i><span className="text-slate-700">Technical Documentation</span></div>
+                <div data-reveal="reveal-up" data-reveal-delay="200" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-emerald-100 hover:border-emerald-300 hover:shadow-md transition-all duration-300"><i className="fas fa-check text-emerald-500"></i><span className="text-slate-700">Clinical Evaluation (CER)</span></div>
+                <div data-reveal="reveal-up" data-reveal-delay="250" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-emerald-100 hover:border-emerald-300 hover:shadow-md transition-all duration-300"><i className="fas fa-check text-emerald-500"></i><span className="text-slate-700">Risk Management (ISO 14971)</span></div>
+                <div data-reveal="reveal-up" data-reveal-delay="300" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-emerald-100 hover:border-emerald-300 hover:shadow-md transition-all duration-300"><i className="fas fa-check text-emerald-500"></i><span className="text-slate-700">EU Authorised Representative</span></div>
+                <div data-reveal="reveal-up" data-reveal-delay="350" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-emerald-100 hover:border-emerald-300 hover:shadow-md transition-all duration-300"><i className="fas fa-check text-emerald-500"></i><span className="text-slate-700">UK Responsible Person (UKRP)</span></div>
+                <div data-reveal="reveal-up" data-reveal-delay="400" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-emerald-100 hover:border-emerald-300 hover:shadow-md transition-all duration-300"><i className="fas fa-check text-emerald-500"></i><span className="text-slate-700">Post-Market Surveillance (PMS)</span></div>
+                <div data-reveal="reveal-up" data-reveal-delay="450" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-emerald-100 hover:border-emerald-300 hover:shadow-md transition-all duration-300"><i className="fas fa-check text-emerald-500"></i><span className="text-slate-700">UDI & EUDAMED Registration</span></div>
+              </div>
+              <div data-reveal="reveal-up" data-reveal-delay="500" className="p-6 bg-gradient-to-r from-emerald-500 to-green-500 rounded-2xl hover:shadow-xl transition-all duration-300">
+                <h4 className="text-white font-bold mb-3">Key Advantages</h4>
+                <div className="grid grid-cols-2 gap-2 text-white text-sm">
+                  <div><i className="fas fa-check mr-2"></i>Access EU & UK markets</div>
+                  <div><i className="fas fa-check mr-2"></i>Faster approvals</div>
+                  <div><i className="fas fa-check mr-2"></i>Reduced regulatory risks</div>
+                  <div><i className="fas fa-check mr-2"></i>Strong compliance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Electronics Section - Light Theme */}
+      <section className="py-24 lg:py-32 bg-gradient-to-b from-slate-50 to-blue-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <div data-reveal="reveal-up" className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 border border-blue-200 rounded-full mb-6">
+              <span className="text-2xl">⚡</span>
+              <span className="text-blue-600 text-xs font-bold uppercase tracking-[0.3em]">Electronics Compliance</span>
+            </div>
+            <h2 data-reveal="reveal-up" data-reveal-delay="100" className="heading-font text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">Electronics <span className="text-blue-600">& Electrical Products</span></h2>
+            <p data-reveal="reveal-up" data-reveal-delay="200" className="text-slate-500 text-lg max-w-3xl mx-auto">Ensure your electronic products meet EU safety, electromagnetic compatibility, and environmental standards.</p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div data-reveal="reveal-left" className="p-8 rounded-3xl border border-blue-200 bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-lg">
+                    <i className="fas fa-gavel text-blue-600 text-sm"></i>
+                  </span>
+                  Applicable Directives
+                </h3>
+                <div className="space-y-4">
+                  <div data-reveal="reveal-up" data-reveal-delay="100" className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all duration-300">
+                    <span className="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-600 font-bold rounded-lg">1</span>
+                    <div><p className="font-bold text-slate-900">Low Voltage Directive (LVD) 2014/35/EU</p><p className="text-xs text-slate-500">Electrical safety</p></div>
+                  </div>
+                  <div data-reveal="reveal-up" data-reveal-delay="150" className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all duration-300">
+                    <span className="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-600 font-bold rounded-lg">2</span>
+                    <div><p className="font-bold text-slate-900">EMC Directive 2014/30/EU</p><p className="text-xs text-slate-500">Electromagnetic interference</p></div>
+                  </div>
+                  <div data-reveal="reveal-up" data-reveal-delay="200" className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all duration-300">
+                    <span className="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-600 font-bold rounded-lg">3</span>
+                    <div><p className="font-bold text-slate-900">RoHS Directive 2011/65/EU</p><p className="text-xs text-slate-500">Restriction of hazardous substances</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <h3 data-reveal="reveal-right" className="text-xl font-bold text-slate-900 mb-6">Our Electronics Services</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div data-reveal="reveal-up" data-reveal-delay="100" className="p-4 bg-white rounded-2xl border border-blue-100 text-center hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-search text-blue-600 text-xl mb-2"></i>
+                  <p className="font-bold text-slate-900 text-sm">Product Assessment</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="150" className="p-4 bg-white rounded-2xl border border-blue-100 text-center hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-vial text-blue-600 text-xl mb-2"></i>
+                  <p className="font-bold text-slate-900 text-sm">Testing Support</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="200" className="p-4 bg-white rounded-2xl border border-blue-100 text-center hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-folder-open text-blue-600 text-xl mb-2"></i>
+                  <p className="font-bold text-slate-900 text-sm">Technical File</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="250" className="p-4 bg-white rounded-2xl border border-blue-100 text-center hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-file-signature text-blue-600 text-xl mb-2"></i>
+                  <p className="font-bold text-slate-900 text-sm">Declaration (DoC)</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="300" className="p-4 bg-white rounded-2xl border border-blue-100 text-center hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-tag text-blue-600 text-xl mb-2"></i>
+                  <p className="font-bold text-slate-900 text-sm">CE Marking</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="350" className="p-4 bg-white rounded-2xl border border-blue-100 text-center hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-leaf text-blue-600 text-xl mb-2"></i>
+                  <p className="font-bold text-slate-900 text-sm">RoHS Compliance</p>
+                </div>
+                <div data-reveal="reveal-up" data-reveal-delay="400" className="p-4 bg-white rounded-2xl border border-blue-100 text-center hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <i className="fas fa-sync-alt text-blue-600 text-xl mb-2"></i>
+                  <p className="font-bold text-slate-900 text-sm">Ongoing Support</p>
+                </div>
+              </div>
+              <div data-reveal="reveal-up" data-reveal-delay="450" className="p-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl hover:shadow-xl transition-all duration-300">
+                <h4 className="text-white font-bold mb-3">Key Advantages</h4>
+                <div className="grid grid-cols-2 gap-2 text-white text-sm">
+                  <div><i className="fas fa-check mr-2"></i>Legal EU market access</div>
+                  <div><i className="fas fa-check mr-2"></i>Avoid recalls</div>
+                  <div><i className="fas fa-check mr-2"></i>Improved reliability</div>
+                  <div><i className="fas fa-check mr-2"></i>Faster launches</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="relative py-24 lg:py-32 overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 pointer-events-none">

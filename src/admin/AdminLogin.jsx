@@ -19,7 +19,7 @@ export default function AdminLogin() {
     try {
       await login(email, password);
       navigate('/admin/dashboard');
-    } catch (err) {
+    } catch {
       setError('Invalid email or password. Please try again.');
     }
     setLoading(false);
@@ -32,7 +32,7 @@ export default function AdminLogin() {
     try {
       await resetPassword(email);
       setResetSent(true);
-    } catch (err) {
+    } catch {
       setError('Could not send reset email. Check the email address.');
     }
     setLoading(false);

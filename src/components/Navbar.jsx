@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const LOGO_URL =
@@ -6,6 +6,9 @@ const LOGO_URL =
 
 /* ── Sub-item lists for dropdown menus ── */
 const ceSubItems = [
+  { label: 'Medical Devices (EU MDR / UK MDR)', href: '/medical-devices' },
+  { label: 'Electronics & Electrical Products', href: '/electrical-electronic-products' },
+  { type: 'divider' },
   { label: 'Construction Products', href: '/construction-products' },
   { label: 'Lifts', href: '/lifts' },
   { label: 'Machinery', href: '/machinery' },
@@ -157,9 +160,9 @@ function NavLink({ href, className, children, onClick }) {
 /* ── Nested sub-menu (flyout) ── */
 function NestedSubMenu({ label, href, children }) {
   const [open, setOpen] = useState(false);
-  let timeout = null;
-  const enter = () => { clearTimeout(timeout); setOpen(true); };
-  const leave = () => { timeout = setTimeout(() => setOpen(false), 150); };
+  const timeoutRef = useRef(null);
+  const enter = () => { clearTimeout(timeoutRef.current); setOpen(true); };
+  const leave = () => { timeoutRef.current = setTimeout(() => setOpen(false), 150); };
 
   return (
     <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
@@ -192,10 +195,10 @@ function NestedSubMenu({ label, href, children }) {
 /* ── Desktop nav item with optional dropdown ── */
 function DesktopNavItem({ link }) {
   const [open, setOpen] = useState(false);
-  let timeout = null;
+  const timeoutRef = useRef(null);
 
-  const enter = () => { clearTimeout(timeout); setOpen(true); };
-  const leave = () => { timeout = setTimeout(() => setOpen(false), 150); };
+  const enter = () => { clearTimeout(timeoutRef.current); setOpen(true); };
+  const leave = () => { timeoutRef.current = setTimeout(() => setOpen(false), 150); };
 
   if (!link.sub) {
     return (
@@ -224,6 +227,9 @@ function DesktopNavItem({ link }) {
       >
         <div className="min-w-[220px] bg-[#060e1f]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl shadow-black/50 py-2">
           {link.sub.map((item) => {
+            if (item.type === 'divider') {
+              return <div key="divider" className="my-2 border-t border-white/10"></div>;
+            }
             const label = typeof item === 'string' ? item : item.label;
             const href = typeof item === 'string' ? link.href : item.href;
             const children = typeof item === 'object' ? item.children : null;
@@ -247,7 +253,7 @@ function DesktopNavItem({ link }) {
 }
 
 /* ── Mobile nested sub-menu ── */
-function MobileNestedMenu({ label, href, children, onClose }) {
+function MobileNestedMenu({ label, children, onClose }) {
   const [open, setOpen] = useState(false);
   return (
     <div>
@@ -315,6 +321,9 @@ function MobileNavItem({ link, onClose }) {
             View All &rarr;
           </NavLink>
           {link.sub.map((item) => {
+            if (item.type === 'divider') {
+              return <div key="divider" className="my-2 border-t border-white/10"></div>;
+            }
             const label = typeof item === 'string' ? item : item.label;
             const href = typeof item === 'string' ? link.href : item.href;
             const children = typeof item === 'object' ? item.children : null;

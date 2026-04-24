@@ -25,16 +25,16 @@ export default function ContactUs() {
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', service: '', message: '' })
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    generateCaptcha()
-  }, [])
-
   function generateCaptcha() {
     setCaptchaA(Math.floor(Math.random() * 10) + 1)
     setCaptchaB(Math.floor(Math.random() * 10) + 1)
     setCaptchaVal('')
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    generateCaptcha()
+  }, [])
 
   async function handleSubmit(e) {
     e.preventDefault()

@@ -15,6 +15,7 @@ import Testimonials from './components/Testimonials';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import CECertification from './CECertification';
+import MedicalDevices from './MedicalDevices';
 import FoodCertification from './FoodCertification';
 import SocialAudits from './SocialAudits';
 import Sustainability from './Sustainability';
@@ -22,6 +23,7 @@ import ManagementSystems from './ManagementSystems';
 import ConstructionProducts from './ConstructionProducts';
 import Machinery from './Machinery';
 import LVDEMC from './LVDEMC';
+import ElectricalProducts from '../pages/ElectricalProducts';
 import RoHS from './RoHS';
 import PImark from './PImark';
 import Lifts from './Lifts';
@@ -96,7 +98,7 @@ import NGOList from './NGOList';
 import CTPATLogin from './CTPATLogin';
 import CTPATRegister from './CTPATRegister';
 import CTPATForgotPassword from './CTPATForgotPassword';
-import { AuthProvider } from './contexts/AuthContext';
+import { AuthProvider } from './contexts/AuthProvider';
 import AdminLogin from './admin/AdminLogin';
 import AdminDashboard from './admin/AdminDashboard';
 import ProtectedRoute from './admin/ProtectedRoute';
@@ -159,6 +161,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/ce-certification" element={<CECertification />} />
+        <Route path="/medical-devices" element={<MedicalDevices />} />
         <Route path="/food-certification" element={<FoodCertification />} />
         <Route path="/social-audits" element={<SocialAudits />} />
         <Route path="/social-audits/wrap" element={<WRAP />} />
@@ -194,6 +197,7 @@ export default function App() {
         <Route path="/construction-products" element={<ConstructionProducts />} />
         <Route path="/machinery" element={<Machinery />} />
         <Route path="/lvd-emc" element={<LVDEMC />} />
+        <Route path="/electrical-electronic-products" element={<ElectricalProducts />} />
         <Route path="/rohs" element={<RoHS />} />
         <Route path="/pi-mark" element={<PImark />} />
         <Route path="/lifts" element={<Lifts />} />

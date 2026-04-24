@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 
 export default function ConsentBanner() {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(() => {
+    return !localStorage.getItem('eurocert_consent')
+  })
 
   useEffect(() => {
-    const consent = localStorage.getItem('eurocert_consent')
-    if (!consent) setVisible(true)
   }, [])
 
   const accept = () => {

@@ -13,9 +13,8 @@ export default function ChildLabourPolicy() {
     <div>
       <TopBar />
       <Navbar />
-
-      {/* ── Hero ── */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
+      
+            <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
           <img src="/p0.png" className="absolute inset-0 w-full h-full object-cover" alt="" />
           <div className="absolute inset-0 bg-[#030a16]/75"></div>

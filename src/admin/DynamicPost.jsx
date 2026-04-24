@@ -19,7 +19,6 @@ export default function DynamicPost() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setLoading(true);
     getPostBySlug('/post/' + slug).then((p) => {
       setPost(p);
       setLoading(false);

@@ -19,7 +19,7 @@ export const certificationData = [
     title: 'Lifts Directive (2014/33/EU)',
     shortTitle: 'Lifts Directive',
     description: 'Comprehensive certification for all types of lifts and lifting equipment per EU standards.',
-    image: '/c3.png',
+    image: '/ce1_files/lift.png',
     details: [
       'Passenger and goods lifts',
       'Service lifts and elevators',
@@ -34,7 +34,7 @@ export const certificationData = [
     title: 'Machinery Directive (2006/42/EC)',
     shortTitle: 'Machinery Directive',
     description: 'Complete machinery safety certification ensuring compliance with EU directives.',
-    image: '/c4.png',
+    image: '/ce1_files/mac.png',
     details: [
       'Industrial machinery systems',
       'Agricultural and construction equipment',
