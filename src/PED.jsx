@@ -55,9 +55,9 @@ export default function PED() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 mb-8">
-              <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-lg bg-white w-full h-full">
-                <table className="w-full text-xs min-w-full">
+            <div className="grid lg:grid-cols-2 gap-8 mb-8 items-stretch">
+              <div className="rounded-2xl border border-slate-200 shadow-lg bg-white overflow-x-auto flex flex-col">
+                <table className="w-full text-xs">
                   <thead className="bg-gradient-to-r from-blue-600 to-blue-700">
                     <tr>
                       <th className="text-left px-2 py-1.5 font-bold text-white border-b">Aspect</th>
