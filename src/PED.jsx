@@ -56,7 +56,7 @@ export default function PED() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8 mb-8 items-stretch">
-              <div className="rounded-2xl border border-slate-200 shadow-lg bg-white overflow-x-auto flex flex-col">
+              <div className="rounded-2xl border border-slate-200 shadow-lg bg-white overflow-x-auto flex flex-col justify-between">
                 <table className="w-full text-xs">
                   <thead className="bg-gradient-to-r from-blue-600 to-blue-700">
                     <tr>
@@ -77,9 +77,9 @@ export default function PED() {
                   </tbody>
                 </table>
               </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl group h-full">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group h-full w-full">
+                <img src="/real.jpeg" alt="PED Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 absolute inset-0" />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent z-10"></div>
-                <img src="/real.jpeg" alt="PED Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                   <p className="text-white font-semibold">Ensuring Safety & Free Trade</p>
                   <p className="text-white/70 text-sm">Across all EU member states</p>
