@@ -56,24 +56,24 @@ export default function PED() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8 mb-8">
-              <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-lg">
+              <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-lg bg-white">
                 <table className="w-full text-xs">
                   <thead className="bg-gradient-to-r from-blue-600 to-blue-700">
                     <tr>
-                      <th className="text-left p-1 font-bold text-white border-b">Aspect</th>
-                      <th className="text-left p-1 font-bold text-white border-b">Previous</th>
-                      <th className="text-left p-1 font-bold text-white border-b">Current</th>
+                      <th className="text-left px-2 py-1.5 font-bold text-white border-b">Aspect</th>
+                      <th className="text-left px-2 py-1.5 font-bold text-white border-b">Previous</th>
+                      <th className="text-left px-2 py-1.5 font-bold text-white border-b">Current</th>
                     </tr>
                   </thead>
-                  <tbody className="bg-white">
-                    <tr><td className="p-1 border-b font-medium">Reference Directive</td><td className="p-1 border-b">97/23/EC</td><td className="p-1 border-b font-semibold text-blue-600">2014/68/EU</td></tr>
-                    <tr><td className="p-1 border-b font-medium">In Force Since</td><td className="p-1 border-b">30 May 2002</td><td className="p-1 border-b font-semibold text-blue-600">20 July 2016</td></tr>
-                    <tr><td className="p-1 border-b font-medium">Date of Transposition</td><td className="p-1 border-b">29 Nov 1999</td><td className="p-1 border-b">19 Jan 2016</td></tr>
-                    <tr><td className="p-1 border-b font-medium">Status</td><td className="p-1 border-b text-slate-400">Superseded</td><td className="p-1 border-b font-semibold text-green-600">Currently Applicable</td></tr>
-                    <tr><td className="p-1 border-b font-medium">Simple Vessels Directive</td><td className="p-1 border-b">2009/105/EC</td><td className="p-1 border-b">2014/29/EU</td></tr>
-                    <tr><td className="p-1 border-b font-medium">Transportable PED</td><td className="p-1 border-b">99/36/EC</td><td className="p-1 border-b">2010/35/EU</td></tr>
-                    <tr><td className="p-1 border-b font-medium">Conformity Modules</td><td className="p-1 border-b">B, D, E, F, G, H</td><td className="p-1 border-b">B, D, E, F, G, H</td></tr>
-                    <tr><td className="p-1 font-medium">Category Classification</td><td className="p-1">I to IV</td><td className="p-1">I to IV</td></tr>
+                  <tbody>
+                    <tr className="border-b"><td className="px-2 py-1 font-medium">Reference Directive</td><td className="px-2 py-1">97/23/EC</td><td className="px-2 py-1 font-semibold text-blue-600">2014/68/EU</td></tr>
+                    <tr className="border-b bg-slate-50"><td className="px-2 py-1 font-medium">In Force Since</td><td className="px-2 py-1">30 May 2002</td><td className="px-2 py-1 font-semibold text-blue-600">20 July 2016</td></tr>
+                    <tr className="border-b"><td className="px-2 py-1 font-medium">Date of Transposition</td><td className="px-2 py-1">29 Nov 1999</td><td className="px-2 py-1">19 Jan 2016</td></tr>
+                    <tr className="border-b bg-slate-50"><td className="px-2 py-1 font-medium">Status</td><td className="px-2 py-1 text-slate-400">Superseded</td><td className="px-2 py-1 font-semibold text-green-600">Currently Applicable</td></tr>
+                    <tr className="border-b"><td className="px-2 py-1 font-medium">Simple Vessels Directive</td><td className="px-2 py-1">2009/105/EC</td><td className="px-2 py-1">2014/29/EU</td></tr>
+                    <tr className="border-b bg-slate-50"><td className="px-2 py-1 font-medium">Transportable PED</td><td className="px-2 py-1">99/36/EC</td><td className="px-2 py-1">2010/35/EU</td></tr>
+                    <tr className="border-b"><td className="px-2 py-1 font-medium">Conformity Modules</td><td className="px-2 py-1">B, D, E, F, G, H</td><td className="px-2 py-1">B, D, E, F, G, H</td></tr>
+                    <tr className="bg-slate-50"><td className="px-2 py-1 font-medium">Category Classification</td><td className="px-2 py-1">I to IV</td><td className="px-2 py-1">I to IV</td></tr>
                   </tbody>
                 </table>
               </div>
