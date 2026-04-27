@@ -99,6 +99,49 @@ const CheckIcon = () => (
   </svg>
 )
 
+const CardIcons = [
+  () => (
+    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+    </svg>
+  ),
+  () => (
+    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+  ),
+  () => (
+    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+    </svg>
+  ),
+  () => (
+    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+    </svg>
+  ),
+  () => (
+    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+    </svg>
+  ),
+  () => (
+    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 3a1 1 0 011 1v4a1 1 0 11-2 0V4a1 1 0 011-1zM9 10v1a1 1 0 11-2 0V4a1 1 0 112 0v6a1 1 0 11-2 0V10a1 1 0 110-2h2"/>
+    </svg>
+  ),
+  () => (
+    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+    </svg>
+  ),
+  () => (
+    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+    </svg>
+  )
+]
+
 export default function ElectricalProducts() {
   const [formData, setFormData] = useState({
     name: '',
@@ -163,9 +206,9 @@ export default function ElectricalProducts() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {directives.map((item, idx) => (
-              <div key={idx} className="glass-card p-8 rounded-2xl border border-blue-200/50 hover:border-blue-600/40 transition-all duration-300">
-                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-7 h-7 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div key={idx} className="glass-card p-8 rounded-2xl border border-amber-200/50 hover:border-amber-500/60 hover:shadow-lg hover:shadow-amber-500/10 transition-all duration-300">
+                <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                   </svg>
                 </div>
@@ -177,64 +220,91 @@ export default function ElectricalProducts() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50/50 relative z-10">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-[#030a16] via-[#0a1628] to-[#030a16] relative z-10">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-black text-slate-900 uppercase mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-black text-white uppercase mb-4">
               Our Core Capabilities
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {capabilities.map((item, idx) => (
-              <div key={idx} className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200/50 hover:shadow-lg transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <CheckIcon />
-                  <div>
-                    <h3 className="font-display font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.description}</p>
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-6">
+              {capabilities.map((item, idx) => (
+                <div key={idx} className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-amber-200/30 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-500/10 transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center">
+                      {CardIcons[idx % CardIcons.length]()}
+                    </div>
+                    <div>
+                      <h3 className="font-display font-bold text-white mb-2">{item.title}</h3>
+                      <p className="text-white/70 text-sm">{item.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img src="/ss.png" alt="Core Capabilities" className="w-full h-full object-cover" />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 relative z-10">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative z-10 overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-10 left-10 w-40 h-40 bg-blue-200 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-60 h-60 bg-blue-300 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-[0.3em] rounded-full mb-4">Our Services</span>
             <h2 className="text-3xl md:text-4xl font-display font-black text-slate-900 uppercase mb-4">
               End-to-End Compliance Services
             </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">Comprehensive solutions to ensure your electrical products meet all EU regulatory requirements</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {services.map((service, idx) => (
-              <div key={idx} className="flex items-center gap-3 p-4 bg-white/60 rounded-lg border border-gray-100">
-                <div className="w-2 h-2 bg-blue-700 rounded-full"></div>
-                <span className="text-slate-800 font-medium">{service}</span>
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative">
+                <img src="/ee.png" alt="Compliance Services" className="w-full h-[500px] object-cover rounded-2xl shadow-2xl" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-900/90 to-transparent rounded-b-2xl">
+                  <h3 className="text-white font-display font-bold text-lg">Compliance Services</h3>
+                  <p className="text-white/70 text-sm">Complete CE marking solutions</p>
+                </div>
               </div>
-            ))}
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {services.map((service, idx) => (
+                <div key={idx} className="group flex items-start gap-4 p-5 bg-white rounded-xl border border-amber-200 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                  <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-amber-600 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 shrink-0">
+                    <i className="fas fa-check"></i>
+                  </div>
+                  <span className="text-slate-800 font-medium text-sm leading-relaxed group-hover:text-amber-700">{service}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50/50 relative z-10">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-[#030a16] via-[#0a1628] to-[#030a16] relative z-10">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-black text-slate-900 uppercase mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-black text-white uppercase mb-4">
               Compliance Workflow
             </h2>
-            <p className="text-slate-600">A structured process to ensure zero compliance gaps.</p>
+            <p className="text-white/70">A structured process to ensure zero compliance gaps.</p>
           </div>
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-0">
             {workflow.map((step, idx) => (
               <div key={idx} className="flex items-center">
-                <div className="glass-card px-6 py-4 rounded-xl border border-blue-200/50 bg-white/80">
-                  <span className="text-blue-700 font-display font-bold">{idx + 1}</span>
-                  <span className="ml-2 text-slate-800 font-medium">{step}</span>
+                <div className="glass-card px-6 py-4 rounded-xl border border-amber-200/30 bg-white/5">
+                  <span className="text-amber-400 font-display font-bold">{idx + 1}</span>
+                  <span className="ml-2 text-white font-medium">{step}</span>
                 </div>
                 {idx < workflow.length - 1 && (
-                  <div className="hidden md:block w-8 h-0.5 bg-blue-300/50 mx-2"></div>
+                  <div className="hidden md:block w-8 h-0.5 bg-amber-400/30 mx-2"></div>
                 )}
               </div>
             ))}
@@ -262,23 +332,23 @@ export default function ElectricalProducts() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50/50 relative z-10">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-[#030a16] via-[#0a1628] to-[#030a16] relative z-10">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-black text-slate-900 uppercase mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-black text-white uppercase mb-4">
               Key Advantages
             </h2>
           </div>
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {advantages.map((adv, idx) => (
               <div key={idx} className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
-                <h3 className="font-display font-bold text-slate-900 mb-2">{adv.title}</h3>
-                <p className="text-slate-600 text-sm">{adv.desc}</p>
+                <h3 className="font-display font-bold text-white mb-2">{adv.title}</h3>
+                <p className="text-white/70 text-sm">{adv.desc}</p>
               </div>
             ))}
           </div>
@@ -292,7 +362,7 @@ export default function ElectricalProducts() {
               Who We Support
             </h2>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             {['Electronics Manufacturers & Exporters', 'OEM / ODM Companies', 'Startups launching new electronic products', 'Importers & Distributors in EU markets'].map((item, idx) => (
               <span key={idx} className="px-6 py-3 bg-blue-100 text-blue-800 font-medium rounded-full">{item}</span>
             ))}
@@ -300,22 +370,22 @@ export default function ElectricalProducts() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-blue-50 relative z-10 overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, #2563eb 1px, transparent 0)', backgroundSize: '32px 32px'}}></div>
+      <section className="py-16 md:py-24 bg-gradient-to-b from-[#030a16] via-[#0a1628] to-[#030a16] relative z-10 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, #f59e0b 1px, transparent 0)', backgroundSize: '32px 32px'}}></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-display font-black text-slate-800 uppercase mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-black text-white uppercase mb-6">
             Ready to Launch Your Electrical Product in Europe?
           </h2>
-          <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
             Ensure full compliance with LVD, EMC & RoHS—without delays or risks.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="px-8 py-4 bg-blue-700 text-white font-display font-bold rounded-full hover:bg-blue-800 hover:shadow-xl transition-all duration-300">
+            <Link to="/contact" className="px-8 py-4 bg-amber-500 text-white font-display font-bold rounded-full hover:bg-amber-600 hover:shadow-xl transition-all duration-300">
               Get Free Consultation
             </Link>
-            <Link to="/contact" className="px-8 py-4 bg-transparent border-2 border-blue-700 text-blue-700 font-display font-bold rounded-full hover:bg-blue-50 transition-all duration-300">
+            <Link to="/contact" className="px-8 py-4 bg-transparent border-2 border-amber-400 text-amber-400 font-display font-bold rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300">
               Speak with Compliance Expert
             </Link>
           </div>

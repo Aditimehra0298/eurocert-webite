@@ -1,455 +1,408 @@
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import TopBar from './components/TopBar'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-const recentPosts = [
-  {
-    title: 'PED 2014/68/EU: Updated Conformity Modules',
-    date: '06 Feb 2026',
-    tag: 'PED Update',
-    link: '/ped',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=200'
-  },
-  {
-    title: 'TPED Pi Marking Requirements 2026',
-    date: '28 Jan 2026',
-    tag: 'TPED',
-    link: '/pi-mark',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=200'
-  },
-  {
-    title: 'Simple Pressure Vessels: SPVD Guide',
-    date: '20 Jan 2026',
-    tag: 'SPVD',
-    link: '/ped',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&q=80&w=200'
-  },
-  {
-    title: 'ADR Compliance for Dangerous Goods',
-    date: '12 Jan 2026',
-    tag: 'Transport',
-    link: '/ped',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=200'
-  },
-  {
-    title: 'Welding Certification for Pressure Equipment',
-    date: '05 Jan 2026',
-    tag: 'Welding',
-    link: '/ped',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=200'
-  }
-]
-
-const additionalServices = [
-  'European Union Full Service Notified Body',
-  'Quality System Auditing & Assessment',
-  'Material Appraisals',
-  'Welding Procedures / Welder Certification',
-  'EU Competent and Notified Body for many other directives'
-]
-
-const relatedServices = [
-  { title: 'PI Mark — TPED', subtitle: 'Transportable Equipment', image: '/c11.png', link: '/pi-mark' },
-  { title: 'Machinery CE Marking', subtitle: 'Directive 2006/42/EC', image: '/c4.png', link: '/machinery' },
-  { title: 'Construction Products', subtitle: 'CPR Certification', image: '/c2.png', link: '/construction-products' }
-]
-
-const CheckIcon = () => (
-  <svg className="w-5 h-5 text-eurogold-400 drop-shadow-[0_0_5px_rgba(212,168,67,0.5)] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 111.414-1.414L9 10.586l3.293-3.293a1 1 0 111.414 1.414z"/>
-  </svg>
-)
-
 export default function PED() {
-  const [sidebarOpen, setSidebarOpen] = useState(true)
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <div>
       <TopBar />
       <Navbar />
 
-      {/* ── Recent Posts Sidebar — Desktop only ── */}
-      <aside className={`fixed top-1/2 -translate-y-1/2 z-50 transition-all duration-500 ease-in-out hidden xl:block ${sidebarOpen ? 'right-0' : '-right-[280px]'}`}>
-        <button onClick={() => setSidebarOpen(!sidebarOpen)} className="absolute -left-9 top-1/2 -translate-y-1/2 w-9 h-20 bg-euro-600 hover:bg-euro-700 text-white rounded-l-xl flex items-center justify-center transition-colors shadow-lg" title={sidebarOpen ? 'Hide recent posts' : 'Show recent posts'}>
-          <i className={`fas fa-chevron-${sidebarOpen ? 'right' : 'left'} text-[10px]`}></i>
-        </button>
-        <div className="w-[280px] max-h-[80vh] bg-white/95 backdrop-blur-xl border border-slate-200 border-r-0 rounded-l-2xl shadow-2xl overflow-hidden flex flex-col">
-          <div className="px-5 py-4 border-b border-slate-100 bg-euro-600">
-            <div className="flex items-center gap-2">
-              <i className="fas fa-newspaper text-eurogold-400 text-xs"></i>
-              <h3 className="heading-font text-[11px] text-white font-bold uppercase tracking-[0.2em]">Recent Posts</h3>
-            </div>
-          </div>
-          <div className="overflow-y-auto flex-1 divide-y divide-slate-100">
-            {recentPosts.map((post, i) => (
-              <Link key={i} to={post.link} className="flex gap-3 px-4 py-3 hover:bg-euro-50/60 transition-colors group">
-                <div className="w-14 h-14 rounded-lg overflow-hidden shrink-0 border border-slate-100">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <span className="text-[8px] font-bold uppercase tracking-[0.15em] text-euro-500 heading-font">{post.tag}</span>
-                  <h4 className="text-[11px] font-semibold text-slate-800 leading-tight mt-0.5 line-clamp-2 group-hover:text-euro-600 transition-colors">{post.title}</h4>
-                  <span className="text-[9px] text-slate-400 mt-1 block">{post.date}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="px-4 py-3 border-t border-slate-100 bg-slate-50">
-            <Link to="/" className="flex items-center justify-center gap-2 heading-font text-[9px] font-bold uppercase tracking-[0.2em] text-euro-600 hover:text-euro-800 transition-colors">
-              View All Posts <i className="fas fa-arrow-right text-[8px]"></i>
-            </Link>
-          </div>
-        </div>
-      </aside>
-
-      {/* ── Hero ── */}
-      <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
+      {/* Hero Section */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-[#030a16] to-slate-900">
         <div className="absolute inset-0 z-0">
-          <img src="/c6.png" className="w-full h-full object-cover opacity-30" alt="Pressure Equipment" />
-          <div className="absolute inset-0 bg-linear-to-b from-[#030a16]/70 via-[#030a16]/40 to-[#030a16]"></div>
+          <img src="/ped-header.png" className="w-full h-full object-cover opacity-40" alt="Pressure Equipment" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent"></div>
         </div>
-        <div className="container mx-auto px-6 relative z-10 text-center py-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-eurogold-400/30 bg-eurogold-400/5 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-eurogold-400 animate-pulse"></span>
-            <span className="heading-font text-[10px] text-eurogold-400 tracking-[0.3em] uppercase font-bold">PED 2014/68/EU</span>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-[80px]"></div>
+        </div>
+        <div className="container mx-auto px-6 relative z-10 text-center py-28">
+          <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-blue-500/20 border border-blue-500/30 rounded-full mb-8">
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+            <span className="text-blue-400 text-xs font-bold uppercase tracking-[0.3em]">Pressure Equipment Directive</span>
           </div>
-          <h1 className="heading-font text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-3 tracking-tight" style={{ textShadow: '0 0 30px rgba(212,168,67,0.3)' }}>
-            Pressure Equipments
+          <h1 className="heading-font text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-5 tracking-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">PED Certification</span>
           </h1>
-          <p className="text-white/50 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-            Pressure equipment means vessels, piping, safety accessories and pressure accessories, including elements attached to pressurized parts such as flanges, nozzles, couplings, supports, lifting lugs.
+          <p className="text-blue-200 text-lg md:text-xl mb-2">Pressure Equipment Directive 2014/68/EU</p>
+          <p className="text-white/80 text-sm max-w-2xl mx-auto mb-8">
+            Eurotech Assessment And Certification Services Private Limited
           </p>
-          <div className="mt-8">
-            <Link to="/#contact" className="inline-flex items-center gap-2 heading-font text-[11px] font-bold uppercase tracking-[0.2em] text-[#030a16] bg-eurogold-400 rounded-full px-8 py-3.5 hover:bg-eurogold-300 transition-all shadow-lg shadow-eurogold-400/20">
-              Click For Free Consultation <i className="fas fa-arrow-right text-[9px]"></i>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/contact#contact-form" className="group px-8 py-4 bg-blue-600 text-white font-bold uppercase tracking-wider rounded-xl hover:bg-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1">
+              Get Free Consultation
+              <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Types of Certification Heading — Light ── */}
-      <section className="py-14 lg:py-18 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-10 max-w-3xl mx-auto">
-            <h4 className="heading-font text-[11px] text-euro-600 tracking-[0.5em] uppercase mb-2 font-bold">EU Directive</h4>
-            <h2 className="heading-font text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
-              PED Certification 2014/68/EU
-            </h2>
-          </div>
-
-          {/* ── PED 2014/68/EU ── */}
-          <div className="max-w-5xl mx-auto mb-12">
-            <div className="mb-6">
-              <h3 className="heading-font text-xl md:text-2xl font-bold text-slate-900 tracking-tight">CE Certification under Pressure Equipment (PED)</h3>
-              <span className="text-[10px] font-bold text-euro-600 uppercase tracking-[0.2em] heading-font">Directive 2014/68/EU</span>
-            </div>
-
-            <div className="grid lg:grid-cols-5 gap-8 items-start">
-              <div className="lg:col-span-3">
-                <p className="text-slate-500 text-[15px] leading-relaxed mb-6">
-                  The European Pressure Equipment Directive (PED) 2014/68/EU provides mandatory guidance for the design, manufacturing and conformity assessment of pressure equipment with a maximum allowable pressure above 0.5 bar. Compliance with this Directive is required for designers and manufacturers looking to sell their equipment to the EU Economic Area.
-                </p>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                  Pressure equipment covered by the PED includes pressure vessels, pressure accessories, piping, steam boilers, safety accessories and assemblies etc.
-                </p>
-                <div className="p-6 rounded-2xl border border-euro-100 bg-euro-50/40">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-xl bg-euro-600 flex items-center justify-center">
-                      <i className="fas fa-clipboard-list text-white text-xs"></i>
-                    </div>
-                    <h4 className="heading-font text-[11px] text-euro-600 font-bold uppercase tracking-widest">Conformity Assessment Procedure for PED</h4>
-                  </div>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    The conformity assessment procedure for PED is determined by the category of the pressure equipment (I to IV), based on rising level of hazard. Each category requires specific modules for design examination, type examination, production quality assurance, and final assessment.
-                  </p>
-                </div>
-              </div>
-              <div className="lg:col-span-2 relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 h-[280px] md:h-[340px] group">
-                <img src="/c6.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="PED Certification" />
-                <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 via-transparent to-transparent"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Why PED is Necessary — Soft BG ── */}
-      <section className="py-14 lg:py-18 bg-[#f8fafc]">
+      {/* Overview of PED Certification */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <h4 className="heading-font text-[11px] text-euro-600 tracking-[0.5em] uppercase mb-2 font-bold">Legal Requirement</h4>
-              <h2 className="heading-font text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
-                Why is PED Certification <span className="text-euro-600">Necessary?</span>
-              </h2>
-            </div>
-
-            <div className="grid lg:grid-cols-5 gap-8 items-start mb-10">
-              <div className="lg:col-span-3 space-y-5">
-                <p className="text-slate-500 text-[15px] leading-relaxed">
-                  Compliance to the Pressure Equipment Directive (PED) is mandatory as a legal requirement for all manufacturers of pressure equipment who wish to export to the EU. The PED certification is based on compliance to Essential Safety Requirements (ESRs) as determined by the PED directive 2014/68/EU.
-                </p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="p-5 rounded-2xl border border-euro-100 bg-white">
-                    <div className="w-10 h-10 rounded-xl bg-euro-50 flex items-center justify-center text-euro-600 mb-3">
-                      <i className="fas fa-drafting-compass text-base"></i>
-                    </div>
-                    <h5 className="heading-font text-[10px] font-bold text-slate-900 uppercase tracking-widest mb-1">Design</h5>
-                    <p className="text-slate-400 text-xs leading-relaxed">Requirements governing the design of pressure equipment</p>
-                  </div>
-                  <div className="p-5 rounded-2xl border border-euro-100 bg-white">
-                    <div className="w-10 h-10 rounded-xl bg-euro-50 flex items-center justify-center text-euro-600 mb-3">
-                      <i className="fas fa-industry text-base"></i>
-                    </div>
-                    <h5 className="heading-font text-[10px] font-bold text-slate-900 uppercase tracking-widest mb-1">Manufacturing</h5>
-                    <p className="text-slate-400 text-xs leading-relaxed">Standards for manufacturing processes and quality control</p>
-                  </div>
-                  <div className="p-5 rounded-2xl border border-euro-100 bg-white">
-                    <div className="w-10 h-10 rounded-xl bg-euro-50 flex items-center justify-center text-euro-600 mb-3">
-                      <i className="fas fa-search text-base"></i>
-                    </div>
-                    <h5 className="heading-font text-[10px] font-bold text-slate-900 uppercase tracking-widest mb-1">Inspection</h5>
-                    <p className="text-slate-400 text-xs leading-relaxed">Inspection requirements for pressure equipment components</p>
-                  </div>
-                  <div className="p-5 rounded-2xl border border-euro-100 bg-white">
-                    <div className="w-10 h-10 rounded-xl bg-euro-50 flex items-center justify-center text-euro-600 mb-3">
-                      <i className="fas fa-vial text-base"></i>
-                    </div>
-                    <h5 className="heading-font text-[10px] font-bold text-slate-900 uppercase tracking-widest mb-1">Testing</h5>
-                    <p className="text-slate-400 text-xs leading-relaxed">Testing protocols for pressure equipment verification</p>
-                  </div>
-                </div>
-                <div className="p-4 rounded-xl border border-eurogold-200 bg-eurogold-50/30 flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-eurogold-400 flex items-center justify-center shrink-0">
-                    <i className="fas fa-exclamation-triangle text-white text-xs"></i>
-                  </div>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    <span className="font-semibold">Important:</span> PED affects most equipment that are designed for pressures above 0.5 bar.
-                  </p>
-                </div>
-              </div>
-              <div className="lg:col-span-2 relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 h-[320px] md:h-[420px] group">
-                <img src="/2.webp" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="PED Certification Documentation" />
-                <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 via-transparent to-transparent"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Steps to Get PED Certified & ESR Compliance — Dark ── */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#030a16]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(212,168,67,0.05)_0%,transparent_60%)]"></div>
-        <div className="relative z-10 py-14 lg:py-18">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto">
-              {/* Steps */}
-              <div className="mb-12">
-                <div className="text-center mb-10">
-                  <h4 className="heading-font text-[11px] text-eurogold-400 tracking-[0.5em] uppercase mb-2 font-bold">Certification Process</h4>
-                  <h2 className="heading-font text-3xl md:text-4xl font-bold text-white tracking-tight">Steps to Get PED Certification</h2>
-                </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                  {[
-                    { num: '01', icon: 'fa-file-signature', title: 'Application', desc: 'Submit your application with product details to a Notified Body for PED assessment.' },
-                    { num: '02', icon: 'fa-drafting-compass', title: 'Design Review', desc: 'Technical design review to ensure compliance with Essential Safety Requirements.' },
-                    { num: '03', icon: 'fa-vial', title: 'Testing & Inspection', desc: 'Product testing, inspection, and conformity assessment by the Notified Body.' },
-                    { num: '04', icon: 'fa-certificate', title: 'PED Certificate', desc: 'Upon compliance, receive your PED certificate enabling EU market access.' }
-                  ].map((step) => (
-                    <div key={step.num} className="p-5 rounded-2xl border border-white/5 bg-white/2 text-center">
-                      <div className="w-10 h-10 rounded-full bg-eurogold-400/10 flex items-center justify-center mx-auto mb-3">
-                        <span className="heading-font text-eurogold-400 font-bold text-sm">{step.num}</span>
-                      </div>
-                      <div className="w-10 h-10 rounded-xl bg-eurogold-400/5 flex items-center justify-center mx-auto mb-3">
-                        <i className={`fas ${step.icon} text-eurogold-400 text-sm`}></i>
-                      </div>
-                      <h4 className="heading-font text-[10px] font-bold text-white uppercase tracking-widest mb-2">{step.title}</h4>
-                      <p className="text-white/45 text-xs leading-relaxed">{step.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* ESR Compliance */}
-              <div>
-                <div className="text-center mb-8">
-                  <h4 className="heading-font text-[11px] text-eurogold-400 tracking-[0.5em] uppercase mb-2 font-bold">Manufacturer Requirements</h4>
-                  <h2 className="heading-font text-2xl md:text-3xl font-bold text-white tracking-tight">Comply with ESR of PED 2014/68/EU</h2>
-                  <p className="text-white/40 text-sm mt-3 max-w-2xl mx-auto">At minimum, a manufacturer must ensure the following to comply with the Essential Safety Requirements:</p>
-                </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {[
-                    { icon: 'fa-drafting-compass', title: 'Harmonised Design', desc: 'Ensure design is as per applicable Harmonised Standard.' },
-                    { icon: 'fa-user-check', title: 'Qualified Welders', desc: 'Ensure welders are qualified to required standards.' },
-                    { icon: 'fa-file-alt', title: 'Qualified WPS', desc: 'Ensure qualified Welding Procedure Specifications are used.' },
-                    { icon: 'fa-cubes', title: 'Compliant Materials', desc: 'Ensure materials are as per applicable Harmonised Standard.' },
-                    { icon: 'fa-cogs', title: 'ISO 9001 QMS', desc: 'Ensure Quality Management System is compliant with ISO 9001.' }
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-white/5 bg-white/2">
-                      <div className="w-9 h-9 rounded-lg bg-eurogold-400/10 flex items-center justify-center shrink-0">
-                        <i className={`fas ${item.icon} text-eurogold-400 text-xs`}></i>
-                      </div>
-                      <div>
-                        <h5 className="heading-font text-[10px] font-bold text-white uppercase tracking-widest mb-1">{item.title}</h5>
-                        <p className="text-white/45 text-xs leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CE after PED & Routes to Apply — Light ── */}
-      <section className="py-14 lg:py-18 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-5 mb-10">
-              <div className="p-6 rounded-2xl border border-euro-100 bg-euro-50/30">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-xl bg-euro-600 flex items-center justify-center">
-                    <i className="fas fa-question-circle text-white text-xs"></i>
-                  </div>
-                  <h4 className="heading-font text-[11px] text-euro-600 font-bold uppercase tracking-widest">CE Marking After PED</h4>
-                </div>
-                <p className="text-slate-500 text-sm leading-relaxed">
-                  Yes, you can apply CE marking on your pressure equipment once you have got a PED certificate from any Notified Body. However, you must ensure that all applicable Directives on your products are also complied with before you apply the CE marking.
-                </p>
-              </div>
-              <div className="p-6 rounded-2xl border border-eurogold-100 bg-eurogold-50/30">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-xl bg-eurogold-400 flex items-center justify-center">
-                    <i className="fas fa-route text-white text-xs"></i>
-                  </div>
-                  <h4 className="heading-font text-[11px] text-euro-600 font-bold uppercase tracking-widest">Routes to Apply for PED</h4>
-                </div>
-                <p className="text-slate-500 text-sm leading-relaxed">
-                  Multiple conformity assessment routes are available depending on your equipment category (I–IV). Our experts help you identify the optimal route based on your specific product type, pressure rating, and intended use.
-                </p>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-2xl border border-eurogold-100 bg-eurogold-50/20 flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-eurogold-400 flex items-center justify-center shrink-0">
-                <i className="fas fa-handshake text-white text-sm"></i>
-              </div>
-              <div>
-                <h4 className="heading-font text-[11px] text-euro-600 font-bold uppercase tracking-widest mb-1">On Behalf of Eurocert S.A</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">
-                  We are offering all PED certification services on behalf of Eurocert S.A. Our team provides end-to-end support from initial application through to final certification and ongoing compliance.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Why Choose Eurocert — Dark ── */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#030a16]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,168,67,0.06)_0%,transparent_60%)]"></div>
-        <div className="relative z-10 py-14 lg:py-18">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto">
-              <div className="lg:col-span-3">
-                <h4 className="heading-font text-[11px] text-eurogold-400 tracking-[0.5em] uppercase mb-2 font-bold">Notified Body</h4>
-                <h3 className="heading-font text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
-                  Why Choose Eurocert?
-                </h3>
-                <p className="text-white/55 text-sm leading-relaxed mb-6">
-                  As a Notified Body, Eurocert partners with you during all phases of the compliance process. This may include documentation and design reviews, product testing, system evaluation, and certification. Eurocert group holds all necessary accreditations for type approval and certification in accordance with all relevant national and international regulations.
-                </p>
-                <h4 className="heading-font text-[11px] text-eurogold-400 font-bold uppercase tracking-widest mb-4">Additional Services</h4>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {additionalServices.map((service, i) => (
-                    <div key={i} className="flex items-start gap-3 p-3 rounded-xl border border-white/5 bg-white/2">
-                      <CheckIcon />
-                      <p className="text-white/55 text-xs leading-relaxed">{service}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="lg:col-span-2 p-8 rounded-2xl border border-white/5 bg-white/2 flex flex-col justify-center">
-                <h3 className="heading-font text-2xl md:text-3xl font-bold text-white tracking-tight mb-4">
-                  Our Expertise
-                </h3>
-                <p className="text-white/45 text-sm leading-relaxed mb-6">
-                  Our experienced auditors understand pressure equipment requirements under the PED directive and guide you through the entire certification process.
-                </p>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="p-4 rounded-xl border border-eurogold-400/20 bg-eurogold-400/5 text-center">
-                    <span className="heading-font text-eurogold-400 font-bold text-3xl block mb-1 leading-none">25+</span>
-                    <span className="text-[9px] font-bold text-white/50 uppercase tracking-[0.2em] heading-font">Years Experience</span>
-                  </div>
-                  <div className="p-4 rounded-xl border border-eurogold-400/20 bg-eurogold-400/5 text-center">
-                    <span className="heading-font text-eurogold-400 font-bold text-3xl block mb-1 leading-none">100%</span>
-                    <span className="text-[9px] font-bold text-white/50 uppercase tracking-[0.2em] heading-font">Directive Accuracy</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Related Certifications — Light ── */}
-      <section className="py-14 lg:py-18 bg-[#f8fafc]">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-8">
-            <h4 className="heading-font text-[11px] text-euro-600 tracking-[0.5em] uppercase mb-2 font-bold">Explore More</h4>
-            <h2 className="heading-font text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Related Certifications</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
-            {relatedServices.map((service, index) => (
-              <Link key={index} to={service.link} className="group relative h-[280px] rounded-2xl overflow-hidden border border-slate-200 hover:border-euro-300 shadow-md hover:shadow-xl transition-all duration-500">
-                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url('${service.image}')` }} />
-                <div className="absolute inset-0 bg-linear-to-t from-[#030a16]/80 via-[#030a16]/20 to-transparent"></div>
-                <div className="absolute bottom-5 left-5 right-5 z-20">
-                  <h4 className="text-white text-sm heading-font font-bold uppercase tracking-widest mb-1">{service.title}</h4>
-                  <span className="text-[9px] font-bold uppercase text-eurogold-400 tracking-[0.2em] heading-font">{service.subtitle}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA — Dark ── */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#030a16]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(212,168,67,0.06)_0%,transparent_60%)]"></div>
-        <div className="relative z-10 py-14 lg:py-18">
-          <div className="container mx-auto px-6 text-center">
-            <div className="max-w-2xl mx-auto p-10 sm:p-12 rounded-2xl border border-white/5 bg-white/2">
-              <h4 className="heading-font text-[11px] text-eurogold-400 tracking-[0.5em] uppercase mb-3 font-bold">Initiate Pressure Equipment Compliance</h4>
-              <h2 className="heading-font text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">Quick Inquiry</h2>
-              <p className="text-white/45 mb-6 max-w-lg mx-auto text-sm leading-relaxed">
-                Our pressure equipment experts are ready to guide your organization through PED compliance and certification.
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-[0.3em] rounded-full mb-4">Overview</span>
+              <h2 className="heading-font text-3xl md:text-4xl font-bold text-slate-900 mb-4">PED Certification</h2>
+              <p className="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                The Pressure Equipment Directive (PED) 2014/68/EU governs the design, manufacture, and conformity assessment of pressure equipment and assemblies placed on the European market. It entered into force on 20 July 2016, fully replacing the earlier Directive 97/23/EC.
               </p>
-              <div className="flex items-center justify-center gap-2 text-white/25 text-[10px] heading-font tracking-widest uppercase mb-6">
-                <i className="fas fa-map-marker-alt text-eurogold-400/60"></i>
-                <span>Eurocert Inspection Services, Panchkula, Haryana</span>
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8 mb-8">
+              <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-lg">
+                <table className="w-full text-sm">
+                  <thead className="bg-gradient-to-r from-blue-600 to-blue-700">
+                    <tr>
+                      <th className="text-left p-4 font-bold text-white border-b">Aspect</th>
+                      <th className="text-left p-4 font-bold text-white border-b">Previous</th>
+                      <th className="text-left p-4 font-bold text-white border-b">Current</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white">
+                    <tr><td className="p-4 border-b font-medium">Reference</td><td className="p-4 border-b">97/23/EC</td><td className="p-4 border-b font-semibold text-blue-600">2014/68/EU</td></tr>
+                    <tr><td className="p-4 border-b font-medium">In Force Since</td><td className="p-4 border-b">30 May 2002</td><td className="p-4 border-b font-semibold text-blue-600">20 July 2016</td></tr>
+                    <tr><td className="p-4 border-b font-medium">Status</td><td className="p-4 border-b text-slate-400">Superseded</td><td className="p-4 border-b font-semibold text-green-600">Currently Applicable</td></tr>
+                    <tr><td className="p-4 border-b font-medium">Simple Vessels</td><td className="p-4 border-b">2009/105/EC</td><td className="p-4 border-b">2014/29/EU</td></tr>
+                    <tr><td className="p-4 font-medium">Transportable</td><td className="p-4">99/36/EC</td><td className="p-4">2010/35/EU</td></tr>
+                  </tbody>
+                </table>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link to="/#contact" className="inline-flex items-center justify-center gap-2 heading-font text-[11px] font-bold uppercase tracking-[0.2em] text-[#030a16] bg-eurogold-400 rounded-full px-8 py-3.5 hover:bg-eurogold-300 transition-all shadow-lg shadow-eurogold-400/20">
-                  Get Started <i className="fas fa-arrow-right text-[9px]"></i>
-                </Link>
-                <a href="tel:+917009007527" className="inline-flex items-center justify-center gap-2 heading-font text-[11px] font-bold uppercase tracking-[0.2em] text-white border border-white/15 rounded-full px-8 py-3.5 hover:bg-white/5 transition-all">
-                  <i className="fas fa-phone text-[9px]"></i> Call Us Now
-                </a>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent z-10"></div>
+                <img src="/real.jpeg" alt="PED Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                  <p className="text-white font-semibold">Ensuring Safety & Free Trade</p>
+                  <p className="text-white/70 text-sm">Across all EU member states</p>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Scope and Application */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#030a16] via-[#0a1628] to-[#030a16] relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500 text-white text-xs font-bold uppercase tracking-[0.3em] rounded-full mb-4">
+                <i className="fas fa-search"></i> Scope
+              </span>
+              <h2 className="heading-font text-4xl md:text-5xl font-bold text-white">Scope and Application</h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+              {[
+                { icon: 'fa-industry', title: 'Pressure vessels', subtitle: 'Tanks, boilers, heat exchangers', color: 'from-amber-500 to-amber-600' },
+                { icon: 'fa-plug', title: 'Industrial piping', subtitle: 'Pipeline assemblies', color: 'from-yellow-500 to-yellow-600' },
+                { icon: 'fa-shield-alt', title: 'Safety accessories', subtitle: 'Relief valves, safety devices', color: 'from-amber-500 to-amber-600' },
+                { icon: 'fa-cogs', title: 'Pressure accessories', subtitle: 'Fittings, flanges, couplings', color: 'from-amber-600 to-amber-700' },
+                { icon: 'fa-layer-group', title: 'Assemblies', subtitle: 'Combined equipment systems', color: 'from-yellow-600 to-amber-600' }
+              ].map((item, idx) => (
+                <div key={idx} className="group p-6 bg-white/5 rounded-2xl border border-amber-200/30 hover:border-amber-400 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1 transition-all duration-300">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <i className={`fas ${item.icon} text-white text-xl`}></i>
+                  </div>
+                  <h3 className="font-bold text-white text-lg mb-1">{item.title}</h3>
+                  <p className="text-white/70 text-sm">{item.subtitle}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mb-10">
+              <h3 className="text-center text-amber-400 font-medium mb-4">Industries Covered</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {['Oil & Gas', 'Chemical', 'Pharmaceuticals', 'Food & Beverage', 'Energy', 'HVAC', 'Plastics', 'Glass'].map((item, idx) => (
+                  <span key={idx} className="px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm font-semibold border border-amber-400/30">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 rounded-3xl p-8 lg:p-10 shadow-2xl">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center">
+                  <i className="fas fa-book text-white text-2xl"></i>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Related Directives</h3>
+                  <p className="text-blue-200">Companion legislation framework</p>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <div className="p-4 bg-white/10 rounded-xl border border-white/20">
+                  <h4 className="text-white font-semibold mb-2">Simple Pressure Vessels</h4>
+                  <p className="text-blue-200 text-sm">Directive 2014/29/EU</p>
+                </div>
+                <div className="p-4 bg-white/10 rounded-xl border border-white/20">
+                  <h4 className="text-white font-semibold mb-2">Transportable PED</h4>
+                  <p className="text-blue-200 text-sm">Directive 2010/35/EU</p>
+                </div>
+                <div className="p-4 bg-white/10 rounded-xl border border-white/20">
+                  <h4 className="text-white font-semibold mb-2">Aerosol Dispensers</h4>
+                  <p className="text-blue-200 text-sm">Directive 75/324/EEC</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Classification */}
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-[0.3em] rounded-full mb-4">Classification</span>
+              <h2 className="heading-font text-3xl md:text-4xl font-bold text-slate-900">Equipment Categories</h2>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-4 mb-8">
+              {[
+                { cat: 'I', level: 'Lowest', desc: 'Self-certification' },
+                { cat: 'II', level: 'Low-Medium', desc: 'Notified Body required' },
+                { cat: 'III', level: 'Medium-High', desc: 'Detailed assessment' },
+                { cat: 'IV', level: 'Highest', desc: 'Full QMS + Type exam' }
+              ].map((item, idx) => (
+                <div key={idx} className="p-6 bg-white rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 text-center group">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <span className="text-white font-bold text-xl">{item.cat}</span>
+                  </div>
+                  <h3 className="font-bold text-slate-900 mb-1">Category {item.cat}</h3>
+                  <p className="text-blue-600 text-sm font-medium">{item.level}</p>
+                  <p className="text-slate-500 text-xs mt-2">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Essential Safety Requirements */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#030a16] via-[#0a1628] to-[#030a16] relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold uppercase tracking-[0.3em] rounded-full mb-4 shadow-lg">
+                <i className="fas fa-shield-alt"></i> Requirements
+              </span>
+              <h2 className="heading-font text-4xl md:text-5xl font-bold text-white mb-3">Essential Safety Requirements</h2>
+              <p className="text-white/70 max-w-2xl mx-auto">Annex I of PED 2014/68/EU specifies essential safety requirements for all covered pressure equipment.</p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+              {[
+                { icon: 'fa-drafting-compass', title: 'Design', subtitle: 'Planning & Calculations', color: 'amber', items: ['EN standards compliance', 'Design margins for pressure', 'Foreseeable operating conditions'] },
+                { icon: 'fa-industry', title: 'Manufacturing', subtitle: 'Production & Quality', color: 'yellow', items: ['Qualified welding procedures', 'Approved NDT personnel', 'Pressure testing & inspection'] },
+                { icon: 'fa-cubes', title: 'Materials', subtitle: 'Raw Materials', color: 'orange', items: ['EN material specifications', 'European Material Approval', 'Material manufacturer QMS'] },
+                { icon: 'fa-certificate', title: 'Documentation', subtitle: 'Compliance Records', color: 'amber', items: ['CE marking & EU DoC', 'Technical documentation', '10-year record retention'] }
+              ].map((item, idx) => (
+                <div key={idx} className="group relative p-7 bg-white/5 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-amber-200/30 hover:border-amber-400">
+                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-${item.color}-500 to-${item.color}-600`}></div>
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <i className={`fas ${item.icon} text-white text-2xl`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
+                  <p className={`text-${item.color}-400 text-xs font-medium mb-4`}>{item.subtitle}</p>
+                  <ul className="space-y-2.5">
+                    {item.items.map((i, j) => (
+                      <li key={j} className="flex items-start gap-2.5 text-white/70 text-sm">
+                        <span className={`w-5 h-5 rounded-full bg-${item.color}-500/20 flex items-center justify-center shrink-0 mt-0.5`}>
+                          <i className={`fas fa-check text-${item.color}-400 text-[8px]`}></i>
+                        </span>
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+                <img src="/ped.png" alt="Safety Requirements" className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center">
+                      <i className="fas fa-clipboard-check text-white text-xl"></i>
+                    </div>
+                    <div>
+                      <p className="text-white font-bold text-lg">Safety Requirements</p>
+                      <p className="text-white/70 text-sm">PED 2014/68/EU Annex I</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-8 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-3xl shadow-xl">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center">
+                    <i className="fas fa-info-circle text-white text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">Key Compliance Areas</h3>
+                    <p className="text-blue-100">What manufacturers must ensure</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: 'CE Marking', value: 'Mandatory' },
+                    { label: 'Documentation', value: '10 Years' },
+                    { label: 'Notified Body', value: 'Categories II-IV' },
+                    { label: 'Conformity', value: 'Required' }
+                  ].map((stat, idx) => (
+                    <div key={idx} className="p-4 bg-white/10 rounded-xl border border-white/20 text-center">
+                      <div className="text-2xl font-bold text-white">{stat.value}</div>
+                      <div className="text-blue-200 text-sm">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Conformity Assessment */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 text-xs font-bold uppercase tracking-[0.3em] rounded-full mb-4">Assessment</span>
+              <h2 className="heading-font text-3xl md:text-4xl font-bold text-slate-900">Conformity Assessment Procedures</h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4 mb-8">
+              {['Module B', 'Module D', 'Module E', 'Module F', 'Module G', 'Module H'].map((item, idx) => (
+                <div key={idx} className="p-5 bg-slate-50 border border-slate-200 rounded-xl text-center hover:bg-amber-50 hover:border-amber-300 transition-all">
+                  <span className="text-amber-600 font-bold">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="p-6 bg-amber-50 border border-amber-200 rounded-2xl">
+              <p className="text-center text-slate-700"><i className="fas fa-info-circle mr-2"></i> CE marking is issued only after successful conformity assessment for Categories II, III, IV</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Responsibilities */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#030a16] via-[#0a1628] to-[#030a16]">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="heading-font text-3xl md:text-4xl font-bold text-white">Manufacturer Obligations</h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                'Meet essential safety requirements',
+                'Correct category classification',
+                'Appropriate conformity assessment',
+                'EU Declaration of Conformity',
+                'CE marking affixation',
+                '10-year documentation',
+                'Instructions for use',
+                'Market surveillance cooperation',
+                'Corrective action'
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-3 p-4 bg-white/5 rounded-xl border border-amber-200/30 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-500/10 transition-all">
+                  <div className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white text-sm font-bold shrink-0">{idx + 1}</div>
+                  <span className="text-white text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="heading-font text-3xl md:text-4xl font-bold text-slate-900 mb-4">Benefits & Challenges</h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-bold text-green-600 mb-4 flex items-center gap-2"><i className="fas fa-check-circle"></i> Key Advantages</h3>
+                <div className="space-y-3">
+                  {['Free trade across EU/EEA', 'Harmonised safety requirements', 'Free choice of Notified Body', 'Proportionate regulatory burden', 'Standardized documentation'].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-200">
+                      <i className="fas fa-check text-green-600"></i>
+                      <span className="text-slate-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-amber-600 mb-4 flex items-center gap-2"><i className="fas fa-exclamation-triangle"></i> Challenges</h3>
+                <div className="space-y-3">
+                  {['Varying Notified Body experience', 'Not all EN standards available', 'UKCA marking for GB', 'Welding qualification time'].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg border border-amber-200">
+                      <i className="fas fa-exclamation-triangle text-amber-600"></i>
+                      <span className="text-slate-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-200/30 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-600 text-white text-xs font-bold uppercase tracking-[0.3em] rounded-full mb-4">
+              <i className="fas fa-hands-helping"></i> Support
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How Eurotech Can Help</h2>
+            <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
+              Comprehensive PED certification support including gap analysis, classification guidance, documentation preparation, and Notified Body coordination.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/contact#contact-form" className="px-8 py-4 bg-blue-600 text-white font-bold uppercase tracking-wider rounded-xl hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                Contact us <i className="fas fa-arrow-right ml-2"></i>
+              </Link>
+            </div>
+            <div className="mt-12 p-6 bg-white rounded-2xl shadow-lg border border-slate-200">
+              <p className="font-bold text-slate-900 mb-1">Eurotech Assessment And Certification Services Private Limited</p>
+              <p className="text-blue-600">www.eurotechworld.net</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Info */}
+      <section className="py-12 bg-slate-900">
+        <div className="container mx-auto px-6 text-center">
+          <h3 className="text-xl font-bold text-white mb-2">Eurotech Assessment And Certification Services Private Limited</h3>
+          <p className="text-white/60">www.eurotechworld.net</p>
         </div>
       </section>
 

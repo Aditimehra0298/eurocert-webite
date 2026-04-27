@@ -41,7 +41,7 @@ export default function Modal({ isOpen, onClose, certification }) {
   if (!isOpen || !certification) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true">
       {/* Backdrop with blur */}
       <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-md animate-fadeIn" onClick={onClose} />
 

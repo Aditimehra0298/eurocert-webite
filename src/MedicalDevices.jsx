@@ -155,11 +155,11 @@ export default function MedicalDevices() {
       </section>
 
 
- <section className="py-20 lg:py-28 bg-gradient-to-b from-slate-50 to-white">
+ <section className="py-20 lg:py-28 bg-gradient-to-b from-[#030a16] via-[#0a1628] to-[#030a16]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 data-reveal="reveal-up" className="heading-font text-4xl md:text-5xl font-bold text-slate-900 mb-4">Our Core Capabilities</h2>
-            <p data-reveal="reveal-up" data-reveal-delay="100" className="text-slate-500 text-lg max-w-2xl mx-auto">Comprehensive expertise across all aspects of medical device regulatory compliance</p>
+            <h2 data-reveal="reveal-up" className="heading-font text-4xl md:text-5xl font-bold text-white mb-4">Our Core Capabilities</h2>
+            <p data-reveal="reveal-up" data-reveal-delay="100" className="text-white/70 text-lg max-w-2xl mx-auto">Comprehensive expertise across all aspects of medical device regulatory compliance</p>
           </div>
           <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
             <div data-reveal="reveal-right" className="relative">
@@ -168,31 +168,31 @@ export default function MedicalDevices() {
                 alt="Medical Device Certification" 
                 className="w-full rounded-3xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-emerald-600 text-white p-6 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-6 -right-6 bg-amber-500 text-white p-6 rounded-2xl shadow-xl">
                 <div className="text-3xl font-bold">500+</div>
                 <div className="text-sm">Devices Certified</div>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {capabilities.slice(0, 4).map((item, index) => (
-                <div key={index} data-reveal="reveal-up" data-reveal-delay={String(index * 100)} className="p-5 bg-white rounded-2xl border border-slate-100 hover:border-emerald-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                  <div className="w-12 h-12 flex items-center justify-center bg-emerald-50 rounded-xl mb-3">
-                    <i className={`fas ${item.icon} text-emerald-600 text-lg`}></i>
+                <div key={index} data-reveal="reveal-up" data-reveal-delay={String(index * 100)} className="p-5 bg-white/5 rounded-2xl border border-amber-200/50 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-1 transition-all duration-300">
+                  <div className="w-12 h-12 flex items-center justify-center bg-amber-500/20 rounded-xl mb-3">
+                    <i className={`fas ${item.icon} text-amber-400 text-lg`}></i>
                   </div>
-                  <h3 className="text-base font-bold text-slate-900 mb-1">{item.title}</h3>
-                  <p className="text-slate-500 text-xs">{item.desc}</p>
+                  <h3 className="text-base font-bold text-white mb-1">{item.title}</h3>
+                  <p className="text-white/70 text-xs">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {capabilities.slice(4).map((item, index) => (
-              <div key={index} data-reveal="reveal-up" data-reveal-delay={String((index + 4) * 100)} className="p-5 bg-white rounded-2xl border border-slate-100 hover:border-emerald-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="w-12 h-12 flex items-center justify-center bg-emerald-50 rounded-xl mb-3">
-                  <i className={`fas ${item.icon} text-emerald-600 text-lg`}></i>
+              <div key={index} data-reveal="reveal-up" data-reveal-delay={String((index + 4) * 100)} className="p-5 bg-white/5 rounded-2xl border border-amber-200/50 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-1 transition-all duration-300">
+                <div className="w-12 h-12 flex items-center justify-center bg-amber-500/20 rounded-xl mb-3">
+                  <i className={`fas ${item.icon} text-amber-400 text-lg`}></i>
                 </div>
-                <h3 className="text-base font-bold text-slate-900 mb-1">{item.title}</h3>
-                <p className="text-slate-500 text-xs">{item.desc}</p>
+                <h3 className="text-base font-bold text-white mb-1">{item.title}</h3>
+                <p className="text-white/70 text-xs">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -222,7 +222,7 @@ export default function MedicalDevices() {
       </section>
 
       {/* Lifecycle */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-emerald-900 to-[#030a16]">
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-[#030a16] via-[#0a1628] to-[#030a16]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 data-reveal="reveal-up" className="heading-font text-4xl md:text-5xl font-bold text-white mb-4">Compliance Lifecycle Approach</h2>
@@ -230,14 +230,14 @@ export default function MedicalDevices() {
           <div className="flex flex-wrap justify-center gap-4">
             {lifecycle.map((step, index) => (
               <div key={index} data-reveal="reveal-up" data-reveal-delay={String(index * 100)} className="flex items-center">
-                <div className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white font-semibold">
-                  <span className="text-emerald-400 mr-2">{index + 1}.</span>{step}
+                <div className="px-8 py-4 bg-white/5 backdrop-blur-md border border-amber-200/50 rounded-xl text-white font-semibold">
+                  <span className="text-amber-400 mr-2">{index + 1}.</span>{step}
                 </div>
-                {index < lifecycle.length - 1 && <i className="fas fa-arrow-right text-white/30 mx-2"></i>}
+                {index < lifecycle.length - 1 && <i className="fas fa-arrow-right text-amber-400/50 mx-2"></i>}
               </div>
             ))}
           </div>
-          <p data-reveal="reveal-up" className="text-center text-white/60 mt-8">We don't just certify—we stay with you throughout the entire product lifecycle.</p>
+          <p data-reveal="reveal-up" className="text-center text-white/70 mt-8">We don't just certify—we stay with you throughout the entire product lifecycle.</p>
         </div>
       </section>
 
@@ -263,30 +263,33 @@ export default function MedicalDevices() {
       
 
       {/* CTA Section */}
-      <section className="relative py-20 lg:py-28 overflow-hidden bg-[#030a16]">
-        <div className="absolute inset-0 pointer-events-none">
-          <img src="/c19.png" alt="" className="w-full h-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/30 via-transparent to-emerald-600/20"></div>
-        </div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div data-reveal="reveal-right">
-              <img 
-                src="/c4.png" 
-                alt="Medical Device Certification" 
-                className="w-full rounded-3xl shadow-2xl"
-              />
+      <section className="py-24 lg:py-32 bg-emerald-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+              Bring Your Medical Device to Europe—
+              <span className="text-emerald-600">Faster, Safer, Fully Compliant</span>
+            </h2>
+            <p className="text-slate-600 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+              Partner with experts who understand both regulations and real-world approvals. We navigate the complex MDR landscape so you can focus on what matters—your patients.
+            </p>
+            <div className="flex justify-center mb-12">
+              <Link to="/contact#contact-form" className="px-10 py-5 bg-emerald-600 text-white font-bold uppercase tracking-wider rounded-full hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-emerald-500/30 hover:-translate-y-1">
+                Get Free Consultation
+              </Link>
             </div>
-            <div>
-              <h2 className="heading-font text-3xl md:text-4xl font-bold text-white mb-4">Bring Your Medical Device to Europe—Faster, Safer, Fully Compliant</h2>
-              <p className="text-white/60 mb-8">Partner with experts who understand both regulations and real-world approvals.</p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact#contact-form" className="px-10 py-5 bg-emerald-600 text-white font-semibold uppercase tracking-wider rounded-2xl hover:bg-emerald-500 transition-all duration-300 shadow-xl">
-                  Get Free Consultation
-                </Link>
-                <a href="tel:+917009007527" className="px-10 py-5 border border-white/20 text-white font-semibold uppercase tracking-wider rounded-2xl hover:bg-white/10 transition-all duration-300">
-                  <i className="fas fa-phone mr-2"></i>Speak with Expert
-                </a>
+            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+              <div className="p-6 bg-white rounded-2xl shadow-lg border border-slate-100">
+                <div className="text-4xl md:text-5xl font-bold text-emerald-600 mb-2">500+</div>
+                <div className="text-slate-500 text-sm uppercase tracking-wider">Certified Devices</div>
+              </div>
+              <div className="p-6 bg-white rounded-2xl shadow-lg border border-slate-100">
+                <div className="text-4xl md:text-5xl font-bold text-emerald-600 mb-2">98%</div>
+                <div className="text-slate-500 text-sm uppercase tracking-wider">First-Time Pass</div>
+              </div>
+              <div className="p-6 bg-white rounded-2xl shadow-lg border border-slate-100">
+                <div className="text-4xl md:text-5xl font-bold text-emerald-600 mb-2">15+</div>
+                <div className="text-slate-500 text-sm uppercase tracking-wider">Years Experience</div>
               </div>
             </div>
           </div>

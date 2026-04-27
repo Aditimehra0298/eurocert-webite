@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-euro-50: #f0f2f8;
+  --color-euro-100: #d9dff0;
+  --color-euro-200: #b3bfe0;
+  --color-euro-300: #8d9fd1;
+  --color-euro-400: #6680c1;
+  --color-euro-500: #2d5299;
+  --color-euro-600: #0a2463;
+  --color-euro-700: #081d52;
+  --color-euro-800: #061641;
+  --color-euro-900: #040f30;
+
+  --color-eurogold-50: #fdf8ef;
+  --color-eurogold-100: #f9ebcf;
+  --color-eurogold-200: #f2d89f;
+  --color-eurogold-300: #ebc370;
+  --color-eurogold-400: #D4A843;
+  --color-eurogold-500: #C09530;
+  --color-eurogold-600: #A07A20;
+  --color-eurogold-700: #806015;
+  --color-eurogold-800: #60480F;
+  --color-eurogold-900: #40300A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll reveal animations */
+.scroll-hidden {
+  opacity: 0;
+}
+
+.reveal-up {
+  transform: translateY(30px);
+  animation: revealUp 0.6s ease-out forwards;
+}
+
+.reveal-left {
+  transform: translateX(-30px);
+  animation: revealLeft 0.6s ease-out forwards;
+}
+
+.reveal-right {
+  transform: translateX(30px);
+  animation: revealRight 0.6s ease-out forwards;
+}
+
+.reveal-scale {
+  transform: scale(0.9);
+  animation: revealScale 0.6s ease-out forwards;
+}
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

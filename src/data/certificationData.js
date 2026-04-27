@@ -178,6 +178,41 @@ export const certificationData = [
       'Navigation equipment compliance',
       'Life-saving appliances certification'
     ]
+  },
+  {
+    id: 'medical-devices',
+    title: 'Medical Devices (EU MDR / UK MDR)',
+    shortTitle: 'Medical Devices',
+    description: 'End-to-end regulatory support for safe and compliant entry into European and UK healthcare markets.',
+    image: '/med.png',
+    link: '/medical-devices',
+    details: [
+      'Regulatory Strategy & Classification',
+      'Technical Documentation (Technical File)',
+      'Clinical Evaluation (CER)',
+      'Risk Management (ISO 14971)',
+      'EU Authorised Representative',
+      'UK Responsible Person (UKRP)',
+      'Post-Market Surveillance (PMS)',
+      'UDI & EUDAMED Registration'
+    ]
+  },
+  {
+    id: 'electrical-products',
+    title: 'Electronics & Electrical Products',
+    shortTitle: 'Electronics',
+    description: 'Ensure your electronic products meet EU safety, electromagnetic compatibility, and environmental standards.',
+    image: '/c21.png',
+    link: '/electrical-electronic-products',
+    details: [
+      'Low Voltage Directive (LVD)',
+      'EMC Directive',
+      'RoHS Compliance',
+      'Product Assessment',
+      'Technical File Preparation',
+      'CE Marking',
+      'EU Declaration of Conformity'
+    ]
   }
 ]
 
