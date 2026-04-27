@@ -28,7 +28,7 @@ export default function PED() {
             <span className="text-blue-400 text-xs font-bold uppercase tracking-[0.3em]">Pressure Equipment Directive</span>
           </div>
           <h1 className="heading-font text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-5 tracking-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">PED Certification</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-400">PED Certification</span>
           </h1>
           <p className="text-blue-200 text-lg md:text-xl mb-2">Pressure Equipment Directive 2014/68/EU</p>
           <p className="text-white/80 text-sm max-w-2xl mx-auto mb-8">
@@ -109,7 +109,7 @@ export default function PED() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
               {[
                 { icon: 'fa-industry', title: 'Pressure vessels', subtitle: 'Tanks, boilers, heat exchangers', color: 'from-amber-500 to-amber-600' },
-                { icon: 'fa-plug', title: 'Industrial piping', subtitle: 'Pipeline assemblies', color: 'from-yellow-500 to-yellow-600' },
+                { icon: 'fa-plug', title: 'Industrial piping', subtitle: 'Pipeline assemblies', color: 'from-amber-400 to-yellow-600' },
                 { icon: 'fa-shield-alt', title: 'Safety accessories', subtitle: 'Relief valves, safety devices', color: 'from-amber-500 to-amber-600' },
                 { icon: 'fa-cogs', title: 'Pressure accessories', subtitle: 'Fittings, flanges, couplings', color: 'from-amber-600 to-amber-700' },
                 { icon: 'fa-layer-group', title: 'Assemblies', subtitle: 'Combined equipment systems', color: 'from-yellow-600 to-amber-600' }
