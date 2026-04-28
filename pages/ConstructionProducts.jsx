@@ -71,9 +71,9 @@ const benefits = [
 ]
 
 const relatedServices = [
-  { title: 'Machinery Marking', subtitle: 'CE Directive', image: '/c4.png', link: '/ce-certification' },
-  { title: 'LVD/EMC Node', subtitle: 'CE Compliance', image: '/c8.png', link: '/ce-certification' },
-  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/c6.png', link: '/ce-certification' }
+  { title: 'Machinery CE Marking', subtitle: 'Directive 2006/42/EC', image: '/machinery-directive.png', link: '/ce-certification/machinery' },
+  { title: 'LVD / EMC Compliance', subtitle: 'CE Directive', image: '/lvd-emc-directive.png', link: '/ce-certification' },
+  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/pressure-equipment-ped.png', link: '/ce-certification' }
 ]
 
 const CheckIcon = () => (
@@ -157,8 +157,8 @@ export default function ConstructionProducts() {
           </div>
           <div className="relative rounded-[2rem] overflow-hidden shadow-lg border border-gray-200 h-[400px] sm:h-[500px]">
             <img 
-              src="/c2.png" 
-              className="w-full h-full object-cover opacity-80" 
+             src="/construction-products-cpr.png" 
+
               alt="Construction Products Certification"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>

@@ -175,7 +175,7 @@ export default function ElectricalProducts() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#030a16] pt-32 pb-16">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/c21.png" 
+            src="/electrical-electronics.png" 
             className="w-full h-full object-cover opacity-40" 
             alt="Electrical & Electronic Products"
           />
@@ -244,7 +244,7 @@ export default function ElectricalProducts() {
               ))}
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/ss.png" alt="Core Capabilities" className="w-full h-full object-cover" />
+              <img src="/electrical-capabilities.png" alt="Core Capabilities" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -267,7 +267,7 @@ export default function ElectricalProducts() {
             <div className="relative group">
               <div className="absolute -inset-2 bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
               <div className="relative">
-                <img src="/ee.png" alt="Compliance Services" className="w-full h-[500px] object-cover rounded-2xl shadow-2xl" />
+                <img src="/electrical-compliance.png" alt="Compliance Services" className="w-full h-[500px] object-cover rounded-2xl shadow-2xl" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-900/90 to-transparent rounded-b-2xl">
                   <h3 className="text-white font-display font-bold text-lg">Compliance Services</h3>
                   <p className="text-white/70 text-sm">Complete CE marking solutions</p>

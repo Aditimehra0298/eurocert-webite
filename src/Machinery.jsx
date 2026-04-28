@@ -22,9 +22,9 @@ const benefits = [
 ]
 
 const relatedServices = [
-  { title: 'Construction Products', subtitle: 'CE Certification', image: '/c2.png', link: '/construction-products' },
-  { title: 'LVD/EMC Compliance', subtitle: 'CE Compliance', image: '/c8.png', link: '/ce-certification' },
-  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/c6.png', link: '/ce-certification' }
+  { title: 'Construction Products', subtitle: 'CE Certification', image: '/construction-products-cpr.png', link: '/construction-products' },
+  { title: 'LVD/EMC Compliance', subtitle: 'CE Compliance', image: '/lvd-emc-directive.png', link: '/ce-certification' },
+  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/pressure-equipment-ped.png', link: '/ce-certification' }
 ]
 
 const CheckIcon = () => (
@@ -74,7 +74,7 @@ export default function Machinery() {
       {/* Hero — Dark */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/c4.png" className="w-full h-full object-cover opacity-25" alt="Machinery" />
+          <img src="/machinery-directive.png" className="w-full h-full object-cover opacity-25" alt="Machinery" />
           <div className="absolute inset-0 bg-linear-to-b from-[#030a16]/80 via-transparent to-[#030a16]"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center py-24">
@@ -101,7 +101,7 @@ export default function Machinery() {
             </div>
           </div>
           <div data-reveal="reveal-right" data-reveal-delay="200" className="relative rounded-3xl overflow-hidden shadow-[0_32px_80px_-15px_rgba(0,0,0,0.1)] border border-slate-100 h-[350px] sm:h-[450px] md:h-[550px] group">
-            <img src="/c4.png" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Machinery Certification" />
+            <img src="/machinery-directive.png" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Machinery Certification" />
             <div className="absolute inset-0 bg-linear-to-t from-slate-900/30 via-transparent to-transparent"></div>
           </div>
         </div>

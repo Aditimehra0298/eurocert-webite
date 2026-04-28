@@ -16,7 +16,7 @@ export default function ChildLabourPolicy() {
       
             <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/p0.png" className="absolute inset-0 w-full h-full object-cover" alt="" />
+          <img src="/child-labour-banner.png" className="absolute inset-0 w-full h-full object-cover" alt="" />
           <div className="absolute inset-0 bg-[#030a16]/75"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.08)_0%,transparent_60%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(19,62,124,0.15)_0%,transparent_50%)]"></div>
@@ -53,7 +53,7 @@ export default function ChildLabourPolicy() {
               </p>
             </div>
             <div className="lg:col-span-2 relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 h-[300px] md:h-[360px] group">
-              <img src="/p1.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Preserving Childhood" />
+              <img src="/child-labour-preserve-childhood.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Preserving Childhood" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent"></div>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function ChildLabourPolicy() {
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-10 items-center">
               <div className="lg:col-span-2 relative rounded-2xl overflow-hidden border border-white/10 h-[300px] md:h-[360px] group order-2 lg:order-1">
-                <img src="/p2.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Education First" />
+                <img src="/child-labour-identification.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Education First" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030a16]/40 via-transparent to-transparent"></div>
               </div>
               <div className="lg:col-span-3 space-y-6 order-1 lg:order-2">
@@ -103,7 +103,7 @@ export default function ChildLabourPolicy() {
               </p>
             </div>
             <div className="lg:col-span-2 relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 h-[300px] md:h-[360px] group">
-              <img src="/p3.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Community Action" />
+              <img src="/child-labour-community.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Community Action" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent"></div>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function ChildLabourPolicy() {
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-10 items-center">
               <div className="lg:col-span-2 relative rounded-2xl overflow-hidden border border-white/10 h-[300px] md:h-[360px] group order-2 lg:order-1">
-                <img src="/p4.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Amplifying Voices" />
+                <img src="/child-labour-ngo-support.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Amplifying Voices" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030a16]/40 via-transparent to-transparent"></div>
               </div>
               <div className="lg:col-span-3 space-y-6 order-1 lg:order-2">
@@ -153,7 +153,7 @@ export default function ChildLabourPolicy() {
               </p>
             </div>
             <div className="lg:col-span-2 relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 h-[300px] md:h-[360px] group">
-              <img src="/p5.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="No Conflict of Interest" />
+              <img src="/child-labour-no-conflict.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="No Conflict of Interest" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent"></div>
             </div>
           </div>

@@ -161,7 +161,7 @@ export default function AboutEurocert() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_60px_rgba(212,168,67,0.1)] h-[350px] md:h-[420px] group flex items-center justify-center bg-white/5">
-              <img src="/Untitled design (19).png" className="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105" alt="Why Eurocert" />
+              <img src="/ctpat-iso-platform.png" className="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105" alt="Why Eurocert" />
               <div className="absolute inset-0 bg-linear-to-t from-[#030a16]/30 via-transparent to-transparent pointer-events-none"></div>
             </div>
           </div>

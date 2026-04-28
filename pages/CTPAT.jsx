@@ -229,7 +229,7 @@ export default function CTPAT() {
                 <div className="flex items-center gap-4 mb-6">
                   <img src="/CTPAT.webp" alt="C-TPAT Logo" className="h-12 object-contain" />
                   <div className="w-px h-10 bg-gray-200"></div>
-                  <img src="/ISO-28000-Logo-1.webp" alt="ISO 28000 Logo" className="h-12 object-contain" />
+                  <img src="/iso-28000-logo.webp" alt="ISO 28000 Logo" className="h-12 object-contain" />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-display font-black text-gray-800 uppercase tracking-widest mb-4 leading-tight">
                   CTPAT Audits - ISO 28000 <span className="text-accent">Exchange Platform</span>

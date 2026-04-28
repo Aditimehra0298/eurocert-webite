@@ -10,7 +10,7 @@ const directives = [
     title: 'CE Certification for Construction Products',
     shortTitle: 'Construction Products (CPR)',
     description: 'Construction products must comply with the Construction Products Regulation (CPR) to be placed on the EU market. We help manufacturers achieve CE marking for construction materials, ensuring they meet all safety and performance requirements.',
-    image: '/c2.png',
+    image: '/construction-products-cpr.png',
     items: [
       'Building materials and components',
       'Structural elements',
@@ -23,7 +23,7 @@ const directives = [
     title: 'CE Certification for Lifts',
     shortTitle: 'Lifts Directive (2014/33/EU)',
     description: 'Lifts and lifting equipment must comply with the Lifts Directive (2014/33/EU) to be sold in the EU. We provide comprehensive certification services for all types of lifts and lifting equipment.',
-    image: '/c3.png',
+    image: '/lifts-directive.png',
     items: [
       'Passenger lifts',
       'Goods lifts',
@@ -36,7 +36,7 @@ const directives = [
     title: 'CE Marking for Machinery',
     shortTitle: 'Machinery Directive (2006/42/EC)',
     description: 'The Machinery Directive (2006/42/EC) requires that machinery placed on the EU market must be CE marked. We assist manufacturers in achieving compliance for all types of machinery and equipment.',
-    image: '/c4.png',
+    image: '/machinery-directive.png',
     items: [
       'Industrial machinery',
       'Agricultural machinery',
@@ -49,7 +49,7 @@ const directives = [
     title: 'CE Marking for Cement',
     shortTitle: 'Cement Products',
     description: 'Cement products must comply with harmonized European standards to receive CE marking. We provide certification services for various types of cement products.',
-    image: '/c5.png',
+    image: '/cement-products.png',
     items: [
       'Portland cement',
       'Composite cement',
@@ -61,7 +61,7 @@ const directives = [
     title: 'PED Certification (2014/68/EU)',
     shortTitle: 'Pressure Equipment Directive',
     description: 'The Pressure Equipment Directive (PED) applies to pressure equipment and assemblies with a maximum allowable pressure greater than 0.5 bar. We provide comprehensive PED certification services.',
-    image: '/c6.png',
+    image: '/pressure-equipment-ped.png',
     items: [
       'Pressure vessels',
       'Steam generators',
@@ -74,7 +74,7 @@ const directives = [
     title: 'RoHS Certification',
     shortTitle: 'Restriction of Hazardous Substances',
     description: 'The RoHS Directive restricts the use of certain hazardous substances in electrical and electronic equipment. We help manufacturers ensure compliance with RoHS requirements.',
-    image: '/c7.png',
+    image: '/rohs-certification.png',
     items: [
       'RoHS compliance testing',
       'Material analysis',
@@ -86,7 +86,7 @@ const directives = [
     title: 'CE Marking LVD/EMC',
     shortTitle: 'Low Voltage & EMC Directive',
     description: 'The Low Voltage Directive (LVD) and Electromagnetic Compatibility (EMC) Directive are essential for electrical and electronic equipment sold in the EU. We provide comprehensive CE marking services for LVD and EMC compliance.',
-    image: '/c8.png',
+    image: '/lvd-emc-directive.png',
     items: [
       'LVD compliance assessment',
       'EMC testing and certification',
@@ -98,7 +98,7 @@ const directives = [
     title: 'REACH Compliance',
     shortTitle: 'Chemical Substances Regulation',
     description: 'REACH (Registration, Evaluation, Authorisation and Restriction of Chemicals) is a European Union regulation addressing the production and use of chemical substances. We provide REACH compliance services to help manufacturers and importers meet regulatory requirements.',
-    image: '/c9.png',
+    image: '/reach-compliance.png',
     items: [
       'REACH compliance assessment',
       'Chemical substance registration support',
@@ -110,7 +110,7 @@ const directives = [
     title: 'ATEX Certification',
     shortTitle: 'Explosive Atmospheres',
     description: 'ATEX (Atmosphères Explosibles) certification is required for equipment and protective systems intended for use in potentially explosive atmospheres. We provide comprehensive ATEX certification services.',
-    image: '/c10.png',
+    image: '/atex-certification.png',
     items: [
       'ATEX equipment certification',
       'Explosive atmosphere risk assessment',
@@ -122,7 +122,7 @@ const directives = [
     title: 'PI Mark - Transportable Pressure Equipment',
     shortTitle: 'TPED Directive',
     description: 'The PI (Periodic Inspection) Mark is required for transportable pressure equipment in accordance with the Transportable Pressure Equipment Directive (TPED). We provide PI Mark certification services.',
-    image: '/c11.png',
+    image: '/pi-mark-tped.png',
     items: [
       'PI Mark certification',
       'Transportable pressure equipment inspection',
@@ -134,7 +134,7 @@ const directives = [
     title: 'Railway Interoperability Certification',
     shortTitle: 'Railway Systems & Components',
     description: 'Railway Interoperability certification ensures that railway systems, subsystems, and components meet European standards for safe and efficient cross-border railway operations. We provide comprehensive railway interoperability certification services.',
-    image: '/c12.png',
+    image: '/railway-interoperability.png',
     items: [
       'Railway interoperability certification',
       'TSI (Technical Specifications for Interoperability) compliance',
@@ -146,7 +146,7 @@ const directives = [
     title: 'Marine Equipment Directive Certification',
     shortTitle: 'MED Wheel Mark',
     description: 'The Marine Equipment Directive (MED) ensures that marine equipment meets safety and environmental protection standards for use on EU ships. We provide MED certification services.',
-    image: '/c13.png',
+    image: '/marine-equipment-med.png',
     items: [
       'Marine Equipment Directive certification',
       'MED wheel mark certification',
@@ -192,7 +192,7 @@ export default function CECertification() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/Gemini_Generated_Image_84ibid84ibid84ib.png" 
+             src="/core-services-banner.png" 
             className="w-full h-full object-cover opacity-40 scale-105" 
             alt="CE Certification Hero"
           />
@@ -236,7 +236,7 @@ export default function CECertification() {
           </div>
           <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-lg border border-gray-200 group h-[350px] sm:h-[450px] md:h-[550px]">
             <img 
-              src="/Gemini_Generated_Image_doy2sldoy2sldoy2.png" 
+               src="/ce-certification-process.png" 
               className="w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-110" 
               alt="CE Certification"
             />

@@ -71,9 +71,9 @@ const benefits = [
 ]
 
 const relatedServices = [
-  { title: 'Construction Products', subtitle: 'CE Certification', image: '/c2.png', link: '/ce-certification/construction-products' },
-  { title: 'Machinery', subtitle: 'CE Marking', image: '/c4.png', link: '/ce-certification/machinery' },
-  { title: 'RoHS', subtitle: 'Compliance', image: '/c7.png', link: '/ce-certification' }
+  { title: 'Construction Products', subtitle: 'CE Certification', image: '/construction-products-cpr.png', link: '/ce-certification/construction-products' },
+  { title: 'Machinery', subtitle: 'CE Marking', image: '/machinery-directive.png', link: '/ce-certification/machinery' },
+  { title: 'RoHS', subtitle: 'Compliance', image: '/rohs-certification.png', link: '/ce-certification' }
 ]
 
 const CheckIcon = () => (
@@ -116,7 +116,7 @@ export default function LVDEMC() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/c21.png" 
+            src="/electrical-electronics.png" 
             className="w-full h-full object-cover opacity-20 scale-105" 
             alt="LVD/EMC Certification"
           />
@@ -157,7 +157,7 @@ export default function LVDEMC() {
           </div>
           <div className="relative rounded-[2rem] overflow-hidden shadow-lg border border-gray-200 h-[400px] sm:h-[500px]">
             <img 
-              src="/c21.png" 
+              src="/electrical-electronics.png" 
               className="w-full h-full object-cover opacity-80" 
               alt="LVD/EMC Certification"
             />

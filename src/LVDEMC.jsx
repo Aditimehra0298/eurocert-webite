@@ -57,9 +57,9 @@ const benefits = [
 ]
 
 const relatedServices = [
-  { title: 'Construction Products', subtitle: 'CE Certification', image: '/c2.png', link: '/construction-products' },
-  { title: 'Machinery', subtitle: 'CE Marking', image: '/c4.png', link: '/machinery' },
-  { title: 'RoHS', subtitle: 'Certification', image: '/c7.png', link: '/rohs' }
+  { title: 'Construction Products', subtitle: 'CE Certification', image: '/construction-products-cpr.png', link: '/construction-products' },
+  { title: 'Machinery', subtitle: 'CE Marking', image: '/machinery-directive.png', link: '/machinery' },
+  { title: 'RoHS', subtitle: 'Certification', image: '/rohs-certification.png', link: '/rohs' }
 ]
 
 export default function LVDEMC() {
@@ -74,7 +74,7 @@ export default function LVDEMC() {
       {/* Hero — Dark */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/c8.png" className="w-full h-full object-cover opacity-25" alt="LVD/EMC" />
+          <img src="/lvd-emc-directive.png" className="w-full h-full object-cover opacity-25" alt="LVD/EMC" />
           <div className="absolute inset-0 bg-linear-to-b from-[#030a16]/80 via-transparent to-[#030a16]"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center py-24">
@@ -101,7 +101,7 @@ export default function LVDEMC() {
             </div>
           </div>
           <div data-reveal="reveal-right" data-reveal-delay="200" className="relative rounded-3xl overflow-hidden shadow-[0_32px_80px_-15px_rgba(0,0,0,0.1)] border border-slate-100 h-[350px] sm:h-[450px] md:h-[550px] group">
-            <img src="/c8.png" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="LVD/EMC Certification" />
+            <img src="/lvd-emc-directive.png" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="LVD/EMC Certification" />
             <div className="absolute inset-0 bg-linear-to-t from-slate-900/30 via-transparent to-transparent"></div>
           </div>
         </div>

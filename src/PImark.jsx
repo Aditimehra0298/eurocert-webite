@@ -61,9 +61,9 @@ const additionalServices = [
 ]
 
 const relatedServices = [
-  { title: 'PED Certification', subtitle: 'Directive 2014/68/EU', image: '/c6.png', link: '/ped' },
-  { title: 'Construction Products', subtitle: 'CPR Certification', image: '/c2.png', link: '/construction-products' },
-  { title: 'Machinery CE Marking', subtitle: 'Directive 2006/42/EC', image: '/c4.png', link: '/machinery' }
+  { title: 'PED Certification', subtitle: 'Directive 2014/68/EU', image: '/pressure-equipment-ped.png', link: '/ped' },
+  { title: 'Construction Products', subtitle: 'CPR Certification', image: '/construction-products-cpr.png', link: '/construction-products' },
+  { title: 'Machinery CE Marking', subtitle: 'Directive 2006/42/EC', image: '/machinery-directive.png', link: '/machinery' }
 ]
 
 const CheckIcon = () => (
@@ -121,7 +121,7 @@ export default function PImark() {
       {/* ── Hero ── */}
       <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/c11.png" className="w-full h-full object-cover opacity-30" alt="PI Mark" />
+          <img src="/pi-mark-tped.png" className="w-full h-full object-cover opacity-30" alt="PI Mark" />
           <div className="absolute inset-0 bg-linear-to-b from-[#030a16]/70 via-[#030a16]/40 to-[#030a16]"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
@@ -183,7 +183,7 @@ export default function PImark() {
               </div>
             </div>
             <div className="lg:col-span-2 relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 h-[320px] md:h-[420px] group">
-              <img src="/c11.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="PI Mark Certification" />
+              <img src="/pi-mark-tped.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="PI Mark Certification" />
               <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 via-transparent to-transparent"></div>
             </div>
           </div>
@@ -285,7 +285,7 @@ export default function PImark() {
                   <span className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] heading-font">Technical Directive Accuracy</span>
                 </div>
                 <div className="relative rounded-2xl overflow-hidden h-[200px] group">
-                  <img src="/c11.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Eurocert Team" />
+                  <img src="/pi-mark-tped.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Eurocert Team" />
                   <div className="absolute inset-0 bg-linear-to-t from-euro-900/40 via-transparent to-transparent"></div>
                 </div>
               </div>

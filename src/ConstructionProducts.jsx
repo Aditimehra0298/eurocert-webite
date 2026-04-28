@@ -60,9 +60,9 @@ const benefits = [
 ]
 
 const relatedServices = [
-  { title: 'Machinery CE Marking', subtitle: 'Directive 2006/42/EC', image: '/c4.png', link: '/machinery' },
-  { title: 'LVD / EMC Compliance', subtitle: 'CE Directive', image: '/c8.png', link: '/lvd-emc' },
-  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/c6.png', link: '/ped' }
+  { title: 'Machinery CE Marking', subtitle: 'Directive 2006/42/EC', image: '/machinery-directive.png', link: '/machinery' },
+  { title: 'LVD / EMC Compliance', subtitle: 'CE Directive', image: '/lvd-emc-directive.png', link: '/lvd-emc' },
+  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/pressure-equipment-ped.png', link: '/ped' }
 ]
 
 const CheckIcon = () => (
@@ -142,7 +142,7 @@ export default function ConstructionProducts() {
       {/* ── Hero ── */}
       <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/c2.png" className="w-full h-full object-cover opacity-30" alt="Construction Products" />
+          <img src="/construction-products-cpr.png" className="w-full h-full object-cover opacity-30" alt="Construction Products" />
           <div className="absolute inset-0 bg-linear-to-b from-[#030a16]/70 via-[#030a16]/40 to-[#030a16]"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
@@ -188,7 +188,7 @@ export default function ConstructionProducts() {
             </div>
             {/* Right: Image — 2 cols */}
             <div className="lg:col-span-2 relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 h-[320px] md:h-[400px] group">
-              <img src="/c2.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Construction Products" />
+              <img src="/construction-products-cpr.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Construction Products" />
               <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 via-transparent to-transparent"></div>
             </div>
           </div>

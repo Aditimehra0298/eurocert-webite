@@ -84,7 +84,7 @@ export default function CECertification() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/technical-conformity-ce-certification-make-an-imag.jpeg" className="w-full h-full object-cover" alt="CE" />
+          <img src="/ce-certification-banner.jpeg" className="w-full h-full object-cover" alt="CE" />
           <div className="absolute inset-0 bg-[#030a16]/85"></div>
         </div>
         
@@ -168,7 +168,7 @@ export default function CECertification() {
 
             <div data-reveal="reveal-right" data-reveal-delay="200" className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 border border-slate-100 h-[450px] lg:h-[550px] group">
-                <img src="/Gemini_Generated_Image_doy2sldoy2sldoy2.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="CE" />
+                <img src="/ce-certification-process.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="CE" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>
                 
                 <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-slate-900/90 to-transparent">

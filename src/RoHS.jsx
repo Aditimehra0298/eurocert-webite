@@ -76,9 +76,9 @@ const services = [
 ]
 
 const relatedServices = [
-  { title: 'REACH Compliance', subtitle: 'Chemical Regulation', image: '/c9.png', link: '/reach' },
-  { title: 'LVD / EMC', subtitle: 'CE Marking', image: '/c8.png', link: '/lvd-emc' },
-  { title: 'Machinery', subtitle: 'CE Certification', image: '/c4.png', link: '/machinery' }
+  { title: 'REACH Compliance', subtitle: 'Chemical Regulation', image: '/reach-compliance.png', link: '/reach' },
+  { title: 'LVD / EMC', subtitle: 'CE Marking', image: '/lvd-emc-directive.png', link: '/lvd-emc' },
+  { title: 'Machinery', subtitle: 'CE Certification', image: '/machinery-directive.png', link: '/machinery' }
 ]
 
 const CheckIcon = () => (
@@ -136,7 +136,7 @@ export default function RoHS() {
       {/* ── Hero ── */}
       <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/rr.png" className="w-full h-full object-cover opacity-30" alt="RoHS" />
+          <img src="/rohs-certification.png" className="w-full h-full object-cover opacity-30" alt="RoHS" />
           <div className="absolute inset-0 bg-linear-to-b from-[#030a16]/70 via-[#030a16]/40 to-[#030a16]"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
@@ -191,7 +191,7 @@ export default function RoHS() {
               </div>
             </div>
             <div className="lg:col-span-2 relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 h-[320px] md:h-[420px] group">
-              <img src="/rr.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="RoHS Certification" />
+              <img src="/rohs-certification.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="RoHS Certification" />
               <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 via-transparent to-transparent"></div>
             </div>
           </div>

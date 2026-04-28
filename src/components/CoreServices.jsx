@@ -15,7 +15,7 @@ const coreServices = [
     description: 'Conformity assessments for products entering the European market — machinery, construction materials, lifts, pressure equipment and more.',
     link: '/ce-certification',
     color: 'blue',
-    image: '/Gemini_Generated_Image_84ibid84ibid84ib.png',
+    image: '/core-services-banner.png',
   },
   {
     icon: 'fa-handshake',

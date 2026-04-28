@@ -71,9 +71,9 @@ const benefits = [
 ]
 
 const relatedServices = [
-  { title: 'Construction Products', subtitle: 'CE Certification', image: '/c2.png', link: '/ce-certification/construction-products' },
-  { title: 'LVD/EMC', subtitle: 'CE Compliance', image: '/c8.png', link: '/ce-certification' },
-  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/c6.png', link: '/ce-certification' }
+  { title: 'Construction Products', subtitle: 'CE Certification', image: '/construction-products-cpr.png', link: '/ce-certification/construction-products' },
+  { title: 'LVD/EMC', subtitle: 'CE Compliance', image: '/lvd-emc-directive.png', link: '/ce-certification' },
+  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/pressure-equipment-ped.png', link: '/ce-certification' }
 ]
 
 const CheckIcon = () => (
@@ -116,7 +116,7 @@ export default function Machinery() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/ce%2015.png" 
+            src="/machinery-directive.png" 
             className="w-full h-full object-cover opacity-20 scale-105" 
             alt="Machinery"
           />
@@ -157,7 +157,7 @@ export default function Machinery() {
           </div>
           <div className="relative rounded-[2rem] overflow-hidden shadow-lg border border-gray-200 h-[400px] sm:h-[500px]">
             <img 
-              src="/ce%2015.png" 
+              src="/machinery-directive.png" 
               className="w-full h-full object-cover opacity-80" 
               alt="Machinery Certification"
             />

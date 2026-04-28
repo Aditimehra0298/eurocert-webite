@@ -80,9 +80,9 @@ const services = [
 ]
 
 const relatedServices = [
-  { title: 'Construction Products', subtitle: 'CPR Certification', image: '/c2.png', link: '/construction-products' },
-  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/c6.png', link: '/ped' },
-  { title: 'LVD / EMC', subtitle: 'CE Compliance', image: '/c8.png', link: '/lvd-emc' }
+  { title: 'Construction Products', subtitle: 'CPR Certification', image: '/construction-products-cpr.png', link: '/construction-products' },
+  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/pressure-equipment-ped.png', link: '/ped' },
+  { title: 'LVD / EMC', subtitle: 'CE Compliance', image: '/lvd-emc-directive.png', link: '/lvd-emc' }
 ]
 
 const CheckIcon = () => (
@@ -140,7 +140,7 @@ export default function Cement() {
       {/* ── Hero ── */}
       <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/c5.png" className="w-full h-full object-cover opacity-30" alt="Cement" />
+          <img src="/cement-products.png" className="w-full h-full object-cover opacity-30" alt="Cement" />
           <div className="absolute inset-0 bg-linear-to-b from-[#030a16]/70 via-[#030a16]/40 to-[#030a16]"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
@@ -188,7 +188,7 @@ export default function Cement() {
               </div>
             </div>
             <div className="lg:col-span-2 relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 h-[320px] md:h-[420px] group">
-              <img src="/c5.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Cement CE Marking" />
+              <img src="/cement-products.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Cement CE Marking" />
               <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 via-transparent to-transparent"></div>
             </div>
           </div>

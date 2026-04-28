@@ -4,7 +4,7 @@ export const certificationData = [
     title: 'Construction Products (CPR)',
     shortTitle: 'Construction Products (CPR)',
     description: 'Ensure your construction products meet EU safety and performance standards for market entry.',
-    image: '/c2.png',
+    image: '/construction-products-cpr.png',
     details: [
       'Building materials and components',
       'Structural elements and steel works',
@@ -19,7 +19,7 @@ export const certificationData = [
     title: 'Lifts Directive (2014/33/EU)',
     shortTitle: 'Lifts Directive',
     description: 'Comprehensive certification for all types of lifts and lifting equipment per EU standards.',
-    image: '/ce1_files/lift.png',
+     image: '/lifts-directive.png',
     details: [
       'Passenger and goods lifts',
       'Service lifts and elevators',
@@ -34,7 +34,7 @@ export const certificationData = [
     title: 'Machinery Directive (2006/42/EC)',
     shortTitle: 'Machinery Directive',
     description: 'Complete machinery safety certification ensuring compliance with EU directives.',
-    image: '/ce1_files/mac.png',
+     image: '/machinery-directive.png',
     details: [
       'Industrial machinery systems',
       'Agricultural and construction equipment',
@@ -49,7 +49,7 @@ export const certificationData = [
     title: 'Cement Products',
     shortTitle: 'Cement Products',
     description: 'Expert certification services for cement manufacturers seeking CE marking.',
-    image: '/c5.png',
+    image: '/cement-products.png',
     details: [
       'Portland and blended cement',
       'Specialty cement products',
@@ -64,7 +64,7 @@ export const certificationData = [
     title: 'Pressure Equipment Directive (PED 2014/68/EU)',
     shortTitle: 'Pressure Equipment (PED)',
     description: 'Ensuring safety compliance for pressure equipment across EU markets.',
-    image: '/c6.png',
+    image: '/pressure-equipment-ped.png',
     details: [
       'Pressure vessel certification',
       'Steam generator compliance',
@@ -79,7 +79,7 @@ export const certificationData = [
     title: 'RoHS Certification',
     shortTitle: 'RoHS Certification',
     description: 'Verify your products are free from hazardous Substances per EU RoHS Directive.',
-    image: '/c7.png',
+    image: '/rohs-certification.png',
     details: [
       'RoHS compliance testing',
       'Chemical substance analysis',
@@ -94,7 +94,7 @@ export const certificationData = [
     title: 'LVD / EMC Directive',
     shortTitle: 'LVD / EMC Directive',
     description: 'Comprehensive electrical safety and electromagnetic compatibility certification.',
-    image: '/c8.png',
+    image: '/lvd-emc-directive.png',
     details: [
       'Low Voltage Directive compliance',
       'EMC testing and certification',
@@ -109,7 +109,7 @@ export const certificationData = [
     title: 'REACH Compliance',
     shortTitle: 'REACH Compliance',
     description: 'Full REACH regulation support for chemical substance compliance.',
-    image: '/c9.png',
+    image: '/reach-compliance.png',
     details: [
       ' substance registration support',
       'Restricted substance verification',
@@ -124,7 +124,7 @@ export const certificationData = [
     title: 'ATEX Certification',
     shortTitle: 'ATEX Certification',
     description: 'Equipment certification for explosive atmosphere environments.',
-    image: '/c10.png',
+    image: '/atex-certification.png',
     details: [
       'ATEX equipment certification',
       'Explosive atmosphere risk assessment',
@@ -139,7 +139,7 @@ export const certificationData = [
     title: 'PI Mark (TPED)',
     shortTitle: 'PI Mark (TPED)',
     description: 'Transportable pressure equipment certification with periodic inspection.',
-    image: '/c11.png',
+    image: '/pi-mark-tped.png',
     details: [
       'PI Mark certification',
       'TPED compliance verification',
@@ -154,7 +154,7 @@ export const certificationData = [
     title: 'Railway Interoperability',
     shortTitle: 'Railway Interoperability',
     description: 'Complete railway certification for TSI compliance and interoperability.',
-    image: '/c12.png',
+    image: '/railway-interoperability.png',
     details: [
       'TSI compliance certification',
       'Railway component approval',
@@ -169,7 +169,7 @@ export const certificationData = [
     title: 'Marine Equipment Directive (MED)',
     shortTitle: 'Marine Equipment (MED)',
     description: 'MED wheel mark certification for marine equipment and safety devices.',
-    image: '/c13.png',
+    image: '/marine-equipment-med.png',
     details: [
       'MED wheel mark certification',
       'Marine equipment type approval',
@@ -184,7 +184,7 @@ export const certificationData = [
     title: 'Medical Devices (EU MDR / UK MDR)',
     shortTitle: 'Medical Devices',
     description: 'End-to-end regulatory support for safe and compliant entry into European and UK healthcare markets.',
-    image: '/med.png',
+    image: '/medical-devices-mdr.png',
     link: '/medical-devices',
     details: [
       'Regulatory Strategy & Classification',
@@ -202,7 +202,7 @@ export const certificationData = [
     title: 'Electronics & Electrical Products',
     shortTitle: 'Electronics',
     description: 'Ensure your electronic products meet EU safety, electromagnetic compatibility, and environmental standards.',
-    image: '/c21.png',
+    image: '/electrical-electronics.png',
     link: '/electrical-electronic-products',
     details: [
       'Low Voltage Directive (LVD)',

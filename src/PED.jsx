@@ -15,7 +15,7 @@ export default function PED() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-[#030a16] to-slate-900">
         <div className="absolute inset-0 z-0">
-          <img src="/ped-header.png" className="w-full h-full object-cover opacity-40" alt="Pressure Equipment" />
+          <img src="/ped-header-banner.png" className="w-full h-full object-cover opacity-40" alt="Pressure Equipment" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent"></div>
         </div>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -78,7 +78,7 @@ export default function PED() {
                 </table>
               </div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl group h-full w-full">
-                <img src="/real.jpeg" alt="PED Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 absolute inset-0" />
+                <img src="/ped-overview.jpeg" alt="PED Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 absolute inset-0" />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent z-10"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                   <p className="text-white font-semibold">Ensuring Safety & Free Trade</p>
@@ -240,7 +240,7 @@ export default function PED() {
 
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-                <img src="/ped.png" alt="Safety Requirements" className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/pressure-equipment-ped.png" alt="Safety Requirements" className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="flex items-center gap-3">

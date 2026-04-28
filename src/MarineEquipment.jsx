@@ -57,9 +57,9 @@ const benefits = [
 ]
 
 const relatedServices = [
-  { title: 'PED', subtitle: 'Pressure Equipment', image: '/c6.png', link: '/ped' },
-  { title: 'Machinery', subtitle: 'CE Certification', image: '/c4.png', link: '/machinery' },
-  { title: 'Railway', subtitle: 'Interoperability', image: '/c12.png', link: '/railway' }
+  { title: 'PED', subtitle: 'Pressure Equipment', image: '/pressure-equipment-ped.png', link: '/ped' },
+  { title: 'Machinery', subtitle: 'CE Certification', image: '/machinery-directive.png', link: '/machinery' },
+  { title: 'Railway', subtitle: 'Interoperability', image: '/railway-interoperability.png', link: '/railway' }
 ]
 
 export default function MarineEquipment() {
@@ -74,7 +74,7 @@ export default function MarineEquipment() {
       {/* Hero — Dark */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/c13.png" className="w-full h-full object-cover opacity-25" alt="Marine Equipment Directive" />
+          <img src="/marine-equipment-med.png" className="w-full h-full object-cover opacity-25" alt="Marine Equipment Directive" />
           <div className="absolute inset-0 bg-linear-to-b from-[#030a16]/80 via-transparent to-[#030a16]"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center py-24">
@@ -101,7 +101,7 @@ export default function MarineEquipment() {
             </div>
           </div>
           <div data-reveal="reveal-right" data-reveal-delay="200" className="relative rounded-3xl overflow-hidden shadow-[0_32px_80px_-15px_rgba(0,0,0,0.1)] border border-slate-100 h-[350px] sm:h-[450px] md:h-[550px] group">
-            <img src="/c13.png" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Marine Equipment Directive" />
+            <img src="/marine-equipment-med.png" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Marine Equipment Directive" />
             <div className="absolute inset-0 bg-linear-to-t from-slate-900/30 via-transparent to-transparent"></div>
           </div>
         </div>

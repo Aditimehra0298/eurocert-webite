@@ -86,9 +86,9 @@ const services = [
 ]
 
 const relatedServices = [
-  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/c6.png', link: '/ped' },
-  { title: 'Construction Products', subtitle: 'CPR Certification', image: '/c2.png', link: '/construction-products' },
-  { title: 'Railway Interoperability', subtitle: 'EN 15085 Welding', image: '/c10.png', link: '/railway' }
+  { title: 'PED Certification', subtitle: 'Pressure Equipment', image: '/pressure-equipment-ped.png', link: '/ped' },
+  { title: 'Construction Products', subtitle: 'CPR Certification', image: '/construction-products-cpr.png', link: '/construction-products' },
+  { title: 'Railway Interoperability', subtitle: 'EN 15085 Welding', image: '/railway-interoperability.png', link: '/railway' }
 ]
 
 const CheckIcon = () => (

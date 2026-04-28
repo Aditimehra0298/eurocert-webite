@@ -30,7 +30,7 @@ export default function CTPATForgotPassword() {
           <div className="flex items-center justify-center gap-6 mb-6">
             <img src="/CTPAT.webp" alt="C-TPAT Logo" className="h-16 md:h-20 object-contain" />
             <div className="w-px h-14 bg-white/20"></div>
-            <img src="/ISO-28000-Logo-1.webp" alt="ISO 28000 Logo" className="h-16 md:h-20 object-contain" />
+            <img src="/iso-28000-logo.webp" alt="ISO 28000 Logo" className="h-16 md:h-20 object-contain" />
           </div>
           <h1 className="heading-font text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight">
             CTPAT AUDITS - ISO 28000 <span className="text-eurogold-400">Exchange Platform</span>
@@ -45,7 +45,7 @@ export default function CTPATForgotPassword() {
           <div className="max-w-md mx-auto">
             <div className="bg-white rounded-2xl border border-slate-100 shadow-xl p-8 md:p-10">
               <div className="mb-6">
-                <img src="/Untitled design (19).png" alt="CTPAT-ISO 28000 Exchange Platform" className="h-14 object-contain" />
+                <img src="/ctpat-iso-platform.png" alt="CTPAT-ISO 28000 Exchange Platform" className="h-14 object-contain" />
               </div>
 
               {!submitted ? (

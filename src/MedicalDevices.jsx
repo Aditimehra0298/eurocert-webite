@@ -83,7 +83,7 @@ export default function MedicalDevices() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#030a16]">
         <div className="absolute inset-0 z-0">
-          <img src="/c18.png" alt="" className="w-full h-full object-cover" style={{ opacity: 0.4 }} />
+          <img src="/medical-devices-banner.png" alt="" className="w-full h-full object-cover" style={{ opacity: 0.4 }} />
           <div className="absolute inset-0 bg-gradient-to-b from-[#030a16]/70 via-[#030a16]/60 to-[#030a16]"></div>
         </div>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -164,7 +164,7 @@ export default function MedicalDevices() {
           <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
             <div data-reveal="reveal-right" className="relative">
               <img 
-                src="/med.png" 
+                src="/medical-devices-mdr.png" 
                 alt="Medical Device Certification" 
                 className="w-full rounded-3xl shadow-2xl"
               />
