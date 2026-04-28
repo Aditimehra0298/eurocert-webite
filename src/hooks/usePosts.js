@@ -37,6 +37,15 @@ const DEMO_POSTS = [
     image: '/news-fssc-22000.png',
     href: '/fssc-v6-transition',
     excerpt: 'Important information about FSSC 22000 v6 transition.',
+  },
+  {
+    id: '4',
+    title: 'What is PED Certification? Process, Requirements & CE Marking Guide',
+    tag: 'Guide',
+    date: '2026-04-28',
+    image: '/ped-header-banner.png',
+    href: '/post/ped-certification-guide',
+    excerpt: 'Learn what PED certification is, its categories, requirements, and step-by-step process to obtain CE marking for pressure equipment in the EU.',
   }
 ];
 
@@ -78,5 +87,6 @@ export async function getAllPosts() {
 }
 
 export async function getPostBySlug(slug) {
-  return DEMO_POSTS.find(p => p.href === slug || p.href === '/post/' + slug) || null;
+  return DEMO_POSTS.find(p => p.href === slug || p.href === '/post/' + slug) || 
+    (slug === 'ped-certification-guide' ? DEMO_POSTS.find(p => p.id === '4') : null);
 }

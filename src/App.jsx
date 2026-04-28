@@ -127,8 +127,8 @@ import ISO22000Complaints from '../pages/ISO22000Complaints';
 import ISO22000Appeals from '../pages/ISO22000Appeals';
 import AlbertHeijn from '../pages/AlbertHeijn';
 import BollinoBlue from '../pages/BollinoBlue';
-import BRC from '../pages/BRC';
 import BiodiversityAddOn from '../pages/BiodiversityAddOn';
+import PEDCertificationGuide from './blog/PED-Certification-Guide';
 
 function HomePage() {
   return (
@@ -228,6 +228,7 @@ export default function App() {
         <Route path="/post/sa-8000-certification" element={<SA8000Certification />} />
         <Route path="/post/become-associate" element={<BecomeAssociate />} />
         <Route path="/post/benefits-associate" element={<BenefitsAssociate />} />
+        <Route path="/post/ped-certification-guide" element={<PEDCertificationGuide />} />
         <Route path="/social-audits/sa-8000" element={<SA8000 />} />
         <Route path="/social-audits/sedex" element={<SEDEX />} />
         <Route path="/social-audits/rjc" element={<RJC />} />
